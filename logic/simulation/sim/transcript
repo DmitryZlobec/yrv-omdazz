@@ -1,0 +1,39 @@
+# do ../modelsim_script.tcl
+# Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 20:55:39 on Nov 02,2021
+# vlog -reportprogress 300 ../testbench.v ../../top.v 
+# -- Compiling module testbench
+# -- Compiling module top
+# 
+# Top level modules:
+# 	testbench
+# End time: 20:55:39 on Nov 02,2021, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vsim work.testbench 
+# Start time: 20:55:39 on Nov 02,2021
+# Loading work.testbench
+# Loading work.top
+# ** Warning: (vsim-2685) [TFMPC] - Too few port connections for 'DUP'.  Expected 3, found 2.
+#    Time: 0 ps  Iteration: 0  Instance: /testbench/DUP File: ../testbench.v Line: 6
+# ** Warning: (vsim-3015) [PCDPC] - Port size (4) does not match connection size (2) for port 'key_sw'. The port definition is at: ../../top.v(3).
+#    Time: 0 ps  Iteration: 0  Instance: /testbench/DUP File: ../testbench.v Line: 6
+# ** Warning: (vsim-3015) [PCDPC] - Port size (4) does not match connection size (2) for port 'led'. The port definition is at: ../../top.v(4).
+#    Time: 0 ps  Iteration: 0  Instance: /testbench/DUP File: ../testbench.v Line: 6
+# ** Warning: (vsim-3722) ../testbench.v(6): [TFMPC] - Missing connection for port 'buzzer'.
+# key_sw=00 led=x1
+# key_sw=01 led=x0
+# key_sw=10 led=x0
+# key_sw=11 led=x1
+# 0 ps
+# 42 ns
+# Can't move the Now cursor.
+# WARNING: No extended dataflow license exists
+# Error: invalid command name "::.main_pane.dataflow.interior.cs.body.pw.df.c"
+# Error: invalid command name "::.main_pane.dataflow.interior.cs.body.pw.df.c"
+# Error: invalid command name "::.main_pane.dataflow.interior.cs.body.pw.df.c"
+# Error: invalid command name "::.main_pane.dataflow.interior.cs.body.pw.df.c"
+# Error: invalid command name "::.main_pane.dataflow.interior.cs.body.pw.df.c"
+# WARNING: No extended dataflow license exists
+# Error: invalid command name "::.main_pane.dataflow.interior.cs.body.pw.df.c"
+# End time: 21:00:08 on Nov 02,2021, Elapsed time: 0:04:29
+# Errors: 0, Warnings: 4

@@ -1,0 +1,55 @@
+m255
+K4
+z2
+!s11f vlog 2020.1 2020.02, Feb 28 2020
+13
+!s112 1.1
+!i10d 8192
+!i10e 25
+!i10f 100
+cModel Technology
+Z0 d/home/zlobec/digital/logic/simulation/sim
+vtestbench
+Z1 !s110 1635868539
+!i10b 1
+!s100 3G?KfB_cTF?=XgISZ0RX<2
+Z2 !s11b Dg1SIo80bB@j0V0VzS_@n1
+I=ieVBe]CmbVGKoDjBS6^`2
+Z3 VDg1SIo80bB@j0V0VzS_@n1
+R0
+w1635868385
+8../testbench.v
+F../testbench.v
+!i122 0
+L0 2 19
+Z4 OV;L;2020.1;71
+r1
+!s85 0
+31
+Z5 !s108 1635868539.000000
+!s107 ../../top.v|../testbench.v|
+Z6 !s90 -reportprogress|300|../testbench.v|../../top.v|
+!i113 1
+Z7 tCvgOpt 0
+vtop
+R1
+!i10b 1
+!s100 F:K9W`@MNZdWMA_Wk7azE0
+R2
+ITDR;S9Uco[gHnbGTk53E22
+R3
+R0
+w1635832415
+8../../top.v
+F../../top.v
+!i122 0
+L0 1 31
+R4
+r1
+!s85 0
+31
+R5
+Z8 !s107 ../../top.v|../testbench.v|
+R6
+!i113 1
+R7
