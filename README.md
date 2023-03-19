@@ -22,6 +22,10 @@ After build you copy  _code_demo.mem32_ to the _Plus/design_ directory
 
 You can run ./07_upload_soft_to_fpga.bash directly form source folder
 
+##Toolchain 
+
+Toolchain shoul be installed in <pre>/opt/riscv_native</pre>
+
 ## Tetris game 
 
 ## Related books:
