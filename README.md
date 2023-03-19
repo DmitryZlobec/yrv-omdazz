@@ -9,6 +9,7 @@ In  Plus/boards/omdazz/ run
   07_upload_soft_to_fpga.bash     Upload binary using UART
   
 ```
+You need USB-to-Serial adapter for loading binary to the FPGA Board.
 
 
 ## Programs Description
