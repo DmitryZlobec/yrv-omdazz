@@ -1,5 +1,11 @@
 # YRV RISC-V CPU for OMDAZZ board
 
+## Program Description
+```
+  01_hello_text        Simple hello world 
+  01_tetris            ASCII based tetris game
+```
+
 ## Tetris game 
 
 ## Related books:
