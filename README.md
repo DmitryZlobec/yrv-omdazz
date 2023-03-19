@@ -18,6 +18,10 @@ You need USB-to-Serial adapter for loading binary to the FPGA Board.
   01_tetris            ASCII based tetris game
 ```
 
+After build you copy  _code_demo.mem32_ to the _Plus/design_ directory
+
+You can run ./07_upload_soft_to_fpga.bash directly form source folder
+
 ## Tetris game 
 
 ## Related books:
