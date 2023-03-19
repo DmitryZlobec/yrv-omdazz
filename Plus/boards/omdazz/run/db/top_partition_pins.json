@@ -1,0 +1,129 @@
+{
+	"partitions" : [
+		{
+			"name" : "Top",
+			"pins" : [
+				{
+					"name" : "led[0]",
+					"strict" : false
+				},
+				{
+					"name" : "led[1]",
+					"strict" : false
+				},
+				{
+					"name" : "led[2]",
+					"strict" : false
+				},
+				{
+					"name" : "led[3]",
+					"strict" : false
+				},
+				{
+					"name" : "abcdefgh[0]",
+					"strict" : false
+				},
+				{
+					"name" : "abcdefgh[1]",
+					"strict" : false
+				},
+				{
+					"name" : "abcdefgh[2]",
+					"strict" : false
+				},
+				{
+					"name" : "abcdefgh[3]",
+					"strict" : false
+				},
+				{
+					"name" : "abcdefgh[4]",
+					"strict" : false
+				},
+				{
+					"name" : "abcdefgh[5]",
+					"strict" : false
+				},
+				{
+					"name" : "abcdefgh[6]",
+					"strict" : false
+				},
+				{
+					"name" : "abcdefgh[7]",
+					"strict" : false
+				},
+				{
+					"name" : "digit[0]",
+					"strict" : false
+				},
+				{
+					"name" : "digit[1]",
+					"strict" : false
+				},
+				{
+					"name" : "digit[2]",
+					"strict" : false
+				},
+				{
+					"name" : "digit[3]",
+					"strict" : false
+				},
+				{
+					"name" : "hsync",
+					"strict" : false
+				},
+				{
+					"name" : "vsync",
+					"strict" : false
+				},
+				{
+					"name" : "rgb[0]",
+					"strict" : false
+				},
+				{
+					"name" : "rgb[1]",
+					"strict" : false
+				},
+				{
+					"name" : "rgb[2]",
+					"strict" : false
+				},
+				{
+					"name" : "key_sw[0]",
+					"strict" : false
+				},
+				{
+					"name" : "reset_n",
+					"strict" : false
+				},
+				{
+					"name" : "key_sw[2]",
+					"strict" : false
+				},
+				{
+					"name" : "key_sw[1]",
+					"strict" : false
+				},
+				{
+					"name" : "key_sw[3]",
+					"strict" : false
+				},
+				{
+					"name" : "clk",
+					"strict" : false
+				},
+				{
+					"name" : "rx",
+					"strict" : false
+				},
+				{
+					"name" : "ps2k_data",
+					"strict" : false
+				},
+				{
+					"name" : "ps2k_clk",
+					"strict" : false
+				}
+			]
+		}
+	]
+}

@@ -1,0 +1,2 @@
+Info (10281): Verilog HDL Declaration information at boot_hex_parser.sv(44): object "CHAR_a" differs only in case from object "CHAR_A" in the same scope File: /home/zlobec/digital/yrv-omdazz/Plus/design/boot_hex_parser.sv Line: 44
+Info (10281): Verilog HDL Declaration information at boot_hex_parser.sv(45): object "CHAR_f" differs only in case from object "CHAR_F" in the same scope File: /home/zlobec/digital/yrv-omdazz/Plus/design/boot_hex_parser.sv Line: 45

@@ -1,0 +1,635 @@
+Info: *******************************************************************
+Info: Running Quartus Prime Shell
+Info: Command: quartus_sh --no_banner --flow compile top
+Info: Quartus(args): compile top
+Info: Project Name = /home/zlobec/digital/yrv-omdazz/Plus/boards/omdazz/run/top
+Info: Revision Name = top
+Warning (125092): Tcl Script File top_extra.qsf not found
+Info: *******************************************************************
+Info: Running Quartus Prime Analysis & Synthesis
+    Info: Version 22.1std.0 Build 915 10/25/2022 SC Lite Edition
+    Info: Processing started: Sun Mar 19 13:05:08 2023
+Info: Command: quartus_map --read_settings_files=on --write_settings_files=off top -c top
+Warning (125092): Tcl Script File top_extra.qsf not found
+Info (20032): Parallel compilation is enabled and will use up to 4 processors
+Info (12021): Found 11 design units, including 11 entities, in source file /home/zlobec/digital/yrv-omdazz/Plus/boards/omdazz/top.sv
+    Info (12023): Found entity 1: yrv_csr File: /home/zlobec/digital/yrv-omdazz/Plus/design/yrv_csr.v Line: 21
+    Info (12023): Found entity 2: yrv_int File: /home/zlobec/digital/yrv-omdazz/Plus/design/yrv_int.v Line: 21
+    Info (12023): Found entity 3: yrv_cpu File: /home/zlobec/digital/yrv-omdazz/Plus/design/yrv_cpu.v Line: 21
+    Info (12023): Found entity 4: yrv_top File: /home/zlobec/digital/yrv-omdazz/Plus/design/yrv_top.v Line: 58
+    Info (12023): Found entity 5: serial_rx File: /home/zlobec/digital/yrv-omdazz/Plus/design/serial_rx.v Line: 21
+    Info (12023): Found entity 6: serial_tx File: /home/zlobec/digital/yrv-omdazz/Plus/design/serial_tx.v Line: 21
+    Info (12023): Found entity 7: serial_top File: /home/zlobec/digital/yrv-omdazz/Plus/design/serial_top.v Line: 21
+    Info (12023): Found entity 8: boot_hex_parser File: /home/zlobec/digital/yrv-omdazz/Plus/design/boot_hex_parser.sv Line: 1
+    Info (12023): Found entity 9: boot_uart_receiver File: /home/zlobec/digital/yrv-omdazz/Plus/design/boot_uart_receiver.sv Line: 1
+    Info (12023): Found entity 10: yrv_mcu File: /home/zlobec/digital/yrv-omdazz/Plus/design/yrv_mcu.v Line: 50
+    Info (12023): Found entity 11: top File: /home/zlobec/digital/yrv-omdazz/Plus/boards/omdazz/top.sv Line: 6
+Info (12021): Found 1 design units, including 1 entities, in source file /home/zlobec/digital/yrv-omdazz/Plus/design/display_dynamic.sv
+    Info (12023): Found entity 1: display_dynamic File: /home/zlobec/digital/yrv-omdazz/Plus/design/display_dynamic.sv Line: 1
+Info (12127): Elaborating entity "top" for the top level hierarchy
+Warning (10036): Verilog HDL or VHDL warning at top.sv(79): object "video_clk" assigned a value but never read File: /home/zlobec/digital/yrv-omdazz/Plus/boards/omdazz/top.sv Line: 79
+Warning (10036): Verilog HDL or VHDL warning at top.sv(95): object "port4_in" assigned a value but never read File: /home/zlobec/digital/yrv-omdazz/Plus/boards/omdazz/top.sv Line: 95
+Warning (10036): Verilog HDL or VHDL warning at top.sv(96): object "port5_in" assigned a value but never read File: /home/zlobec/digital/yrv-omdazz/Plus/boards/omdazz/top.sv Line: 96
+Warning (10036): Verilog HDL or VHDL warning at top.sv(138): object "vga_wr_byte_1" assigned a value but never read File: /home/zlobec/digital/yrv-omdazz/Plus/boards/omdazz/top.sv Line: 138
+Warning (10036): Verilog HDL or VHDL warning at top.sv(323): object "border_color_reg" assigned a value but never read File: /home/zlobec/digital/yrv-omdazz/Plus/boards/omdazz/top.sv Line: 323
+Warning (10036): Verilog HDL or VHDL warning at top.sv(335): object "row" assigned a value but never read File: /home/zlobec/digital/yrv-omdazz/Plus/boards/omdazz/top.sv Line: 335
+Warning (10230): Verilog HDL assignment warning at top.sv(73): truncated value with size 32 to match size of target (1) File: /home/zlobec/digital/yrv-omdazz/Plus/boards/omdazz/top.sv Line: 73
+Warning (10230): Verilog HDL assignment warning at top.sv(74): truncated value with size 32 to match size of target (8) File: /home/zlobec/digital/yrv-omdazz/Plus/boards/omdazz/top.sv Line: 74
+Warning (10230): Verilog HDL assignment warning at top.sv(341): truncated value with size 10 to match size of target (7) File: /home/zlobec/digital/yrv-omdazz/Plus/boards/omdazz/top.sv Line: 341
+Warning (10230): Verilog HDL assignment warning at top.sv(369): truncated value with size 32 to match size of target (1) File: /home/zlobec/digital/yrv-omdazz/Plus/boards/omdazz/top.sv Line: 369
+Warning (10230): Verilog HDL assignment warning at top.sv(379): truncated value with size 32 to match size of target (3) File: /home/zlobec/digital/yrv-omdazz/Plus/boards/omdazz/top.sv Line: 379
+Warning (10230): Verilog HDL assignment warning at top.sv(391): truncated value with size 32 to match size of target (3) File: /home/zlobec/digital/yrv-omdazz/Plus/boards/omdazz/top.sv Line: 391
+Warning (10240): Verilog HDL Always Construct warning at top.sv(394): inferring latch(es) for variable "vga_wr_reg_1", which holds its previous value in one or more paths through the always construct File: /home/zlobec/digital/yrv-omdazz/Plus/boards/omdazz/top.sv Line: 394
+Warning (10030): Net "char.waddr_a" at top.sv(141) has no driver or initial value, using a default initial value '0' File: /home/zlobec/digital/yrv-omdazz/Plus/boards/omdazz/top.sv Line: 141
+Warning (10030): Net "char.data_a" at top.sv(141) has no driver or initial value, using a default initial value '0' File: /home/zlobec/digital/yrv-omdazz/Plus/boards/omdazz/top.sv Line: 141
+Warning (10030): Net "char.we_a" at top.sv(141) has no driver or initial value, using a default initial value '0' File: /home/zlobec/digital/yrv-omdazz/Plus/boards/omdazz/top.sv Line: 141
+Warning (10034): Output port "sram_a" at top.sv(23) has no driver File: /home/zlobec/digital/yrv-omdazz/Plus/boards/omdazz/top.sv Line: 23
+Warning (10034): Output port "sram_n_cs1" at top.sv(24) has no driver File: /home/zlobec/digital/yrv-omdazz/Plus/boards/omdazz/top.sv Line: 24
+Warning (10034): Output port "sram_cs2" at top.sv(25) has no driver File: /home/zlobec/digital/yrv-omdazz/Plus/boards/omdazz/top.sv Line: 25
+Warning (10034): Output port "sram_n_oe" at top.sv(26) has no driver File: /home/zlobec/digital/yrv-omdazz/Plus/boards/omdazz/top.sv Line: 26
+Warning (10034): Output port "sram_n_we" at top.sv(27) has no driver File: /home/zlobec/digital/yrv-omdazz/Plus/boards/omdazz/top.sv Line: 27
+Info (12128): Elaborating entity "yrv_mcu" for hierarchy "yrv_mcu:i_yrv_mcu" File: /home/zlobec/digital/yrv-omdazz/Plus/boards/omdazz/top.sv Line: 154
+Warning (10036): Verilog HDL or VHDL warning at yrv_mcu.v(105): object "ld_wdata" assigned a value but never read File: /home/zlobec/digital/yrv-omdazz/Plus/design/yrv_mcu.v Line: 105
+Warning (10036): Verilog HDL or VHDL warning at yrv_mcu.v(230): object "boot_valid_reg" assigned a value but never read File: /home/zlobec/digital/yrv-omdazz/Plus/design/yrv_mcu.v Line: 230
+Warning (10027): Verilog HDL or VHDL warning at the yrv_mcu.v(276): index expression is not wide enough to address all of the elements in the array File: /home/zlobec/digital/yrv-omdazz/Plus/design/yrv_mcu.v Line: 276
+Warning (10027): Verilog HDL or VHDL warning at the yrv_mcu.v(277): index expression is not wide enough to address all of the elements in the array File: /home/zlobec/digital/yrv-omdazz/Plus/design/yrv_mcu.v Line: 277
+Warning (10027): Verilog HDL or VHDL warning at the yrv_mcu.v(278): index expression is not wide enough to address all of the elements in the array File: /home/zlobec/digital/yrv-omdazz/Plus/design/yrv_mcu.v Line: 278
+Warning (10027): Verilog HDL or VHDL warning at the yrv_mcu.v(279): index expression is not wide enough to address all of the elements in the array File: /home/zlobec/digital/yrv-omdazz/Plus/design/yrv_mcu.v Line: 279
+Warning (10034): Output port "extra_debug_data" at yrv_mcu.v(93) has no driver File: /home/zlobec/digital/yrv-omdazz/Plus/design/yrv_mcu.v Line: 93
+Warning (10034): Output port "mem_lock" at yrv_mcu.v(86) has no driver File: /home/zlobec/digital/yrv-omdazz/Plus/design/yrv_mcu.v Line: 86
+Info (12128): Elaborating entity "yrv_top" for hierarchy "yrv_mcu:i_yrv_mcu|yrv_top:YRV" File: /home/zlobec/digital/yrv-omdazz/Plus/design/yrv_mcu.v Line: 172
+Info (12128): Elaborating entity "yrv_cpu" for hierarchy "yrv_mcu:i_yrv_mcu|yrv_top:YRV|yrv_cpu:CPU" File: /home/zlobec/digital/yrv-omdazz/Plus/design/yrv_top.v Line: 162
+Warning (10036): Verilog HDL or VHDL warning at yrv_cpu.v(208): object "ldpc_2_reg" assigned a value but never read File: /home/zlobec/digital/yrv-omdazz/Plus/design/yrv_cpu.v Line: 208
+Warning (10230): Verilog HDL assignment warning at yrv_cpu.v(1357): truncated value with size 63 to match size of target (32) File: /home/zlobec/digital/yrv-omdazz/Plus/design/yrv_cpu.v Line: 1357
+Warning (10935): Verilog HDL Casex/Casez warning at yrv_cpu.v(1352): casex/casez item expression overlaps with a previous casex/casez item expression File: /home/zlobec/digital/yrv-omdazz/Plus/design/yrv_cpu.v Line: 1352
+Warning (10935): Verilog HDL Casex/Casez warning at yrv_cpu.v(1353): casex/casez item expression overlaps with a previous casex/casez item expression File: /home/zlobec/digital/yrv-omdazz/Plus/design/yrv_cpu.v Line: 1353
+Warning (10935): Verilog HDL Casex/Casez warning at yrv_cpu.v(1354): casex/casez item expression overlaps with a previous casex/casez item expression File: /home/zlobec/digital/yrv-omdazz/Plus/design/yrv_cpu.v Line: 1354
+Warning (10935): Verilog HDL Casex/Casez warning at yrv_cpu.v(1355): casex/casez item expression overlaps with a previous casex/casez item expression File: /home/zlobec/digital/yrv-omdazz/Plus/design/yrv_cpu.v Line: 1355
+Warning (10935): Verilog HDL Casex/Casez warning at yrv_cpu.v(1356): casex/casez item expression overlaps with a previous casex/casez item expression File: /home/zlobec/digital/yrv-omdazz/Plus/design/yrv_cpu.v Line: 1356
+Warning (10935): Verilog HDL Casex/Casez warning at yrv_cpu.v(1357): casex/casez item expression overlaps with a previous casex/casez item expression File: /home/zlobec/digital/yrv-omdazz/Plus/design/yrv_cpu.v Line: 1357
+Warning (10935): Verilog HDL Casex/Casez warning at yrv_cpu.v(1358): casex/casez item expression overlaps with a previous casex/casez item expression File: /home/zlobec/digital/yrv-omdazz/Plus/design/yrv_cpu.v Line: 1358
+Warning (10209): Verilog HDL Case Statement warning at yrv_cpu.v(1349): honored parallel_case synthesis attribute - differences between design synthesis and simulation may occur File: /home/zlobec/digital/yrv-omdazz/Plus/design/yrv_cpu.v Line: 1349
+Info (12128): Elaborating entity "yrv_csr" for hierarchy "yrv_mcu:i_yrv_mcu|yrv_top:YRV|yrv_csr:CSR" File: /home/zlobec/digital/yrv-omdazz/Plus/design/yrv_top.v Line: 178
+Warning (10036): Verilog HDL or VHDL warning at yrv_csr.v(69): object "ccount_en" assigned a value but never read File: /home/zlobec/digital/yrv-omdazz/Plus/design/yrv_csr.v Line: 69
+Warning (10036): Verilog HDL or VHDL warning at yrv_csr.v(71): object "icount_en" assigned a value but never read File: /home/zlobec/digital/yrv-omdazz/Plus/design/yrv_csr.v Line: 71
+Info (12128): Elaborating entity "yrv_int" for hierarchy "yrv_mcu:i_yrv_mcu|yrv_top:YRV|yrv_int:INT" File: /home/zlobec/digital/yrv-omdazz/Plus/design/yrv_top.v Line: 188
+Info (12128): Elaborating entity "boot_uart_receiver" for hierarchy "yrv_mcu:i_yrv_mcu|boot_uart_receiver:BOOT_UART_RECEIVER" File: /home/zlobec/digital/yrv-omdazz/Plus/design/yrv_mcu.v Line: 194
+Warning (10230): Verilog HDL assignment warning at boot_uart_receiver.sv(61): truncated value with size 32 to match size of target (9) File: /home/zlobec/digital/yrv-omdazz/Plus/design/boot_uart_receiver.sv Line: 61
+Warning (10230): Verilog HDL assignment warning at boot_uart_receiver.sv(111): truncated value with size 32 to match size of target (9) File: /home/zlobec/digital/yrv-omdazz/Plus/design/boot_uart_receiver.sv Line: 111
+Warning (10230): Verilog HDL assignment warning at boot_uart_receiver.sv(121): truncated value with size 32 to match size of target (9) File: /home/zlobec/digital/yrv-omdazz/Plus/design/boot_uart_receiver.sv Line: 121
+Info (12128): Elaborating entity "boot_hex_parser" for hierarchy "yrv_mcu:i_yrv_mcu|boot_hex_parser:BOOT_HEX_PARSER" File: /home/zlobec/digital/yrv-omdazz/Plus/design/yrv_mcu.v Line: 228
+Warning (10230): Verilog HDL assignment warning at boot_hex_parser.sv(32): truncated value with size 32 to match size of target (25) File: /home/zlobec/digital/yrv-omdazz/Plus/design/boot_hex_parser.sv Line: 32
+Warning (10230): Verilog HDL assignment warning at boot_hex_parser.sv(61): truncated value with size 8 to match size of target (4) File: /home/zlobec/digital/yrv-omdazz/Plus/design/boot_hex_parser.sv Line: 61
+Warning (10230): Verilog HDL assignment warning at boot_hex_parser.sv(68): truncated value with size 32 to match size of target (4) File: /home/zlobec/digital/yrv-omdazz/Plus/design/boot_hex_parser.sv Line: 68
+Warning (10230): Verilog HDL assignment warning at boot_hex_parser.sv(70): truncated value with size 32 to match size of target (4) File: /home/zlobec/digital/yrv-omdazz/Plus/design/boot_hex_parser.sv Line: 70
+Warning (10230): Verilog HDL assignment warning at boot_hex_parser.sv(127): truncated value with size 32 to match size of target (14) File: /home/zlobec/digital/yrv-omdazz/Plus/design/boot_hex_parser.sv Line: 127
+Info (12128): Elaborating entity "serial_top" for hierarchy "yrv_mcu:i_yrv_mcu|serial_top:SERIAL" File: /home/zlobec/digital/yrv-omdazz/Plus/design/yrv_mcu.v Line: 387
+Info (12128): Elaborating entity "serial_rx" for hierarchy "yrv_mcu:i_yrv_mcu|serial_top:SERIAL|serial_rx:RXCV" File: /home/zlobec/digital/yrv-omdazz/Plus/design/serial_top.v Line: 88
+Info (12128): Elaborating entity "serial_tx" for hierarchy "yrv_mcu:i_yrv_mcu|serial_top:SERIAL|serial_tx:XMIT" File: /home/zlobec/digital/yrv-omdazz/Plus/design/serial_top.v Line: 93
+Info (12128): Elaborating entity "display_dynamic" for hierarchy "display_dynamic:i_display" File: /home/zlobec/digital/yrv-omdazz/Plus/boards/omdazz/top.sv Line: 210
+Warning (12125): Using design file /home/zlobec/digital/yrv-omdazz/Plus/boards/omdazz/vga.sv, which is not specified as a design file for the current project, but contains definitions for 1 design units and 1 entities in project
+    Info (12023): Found entity 1: vga File: /home/zlobec/digital/yrv-omdazz/Plus/boards/omdazz/vga.sv Line: 3
+Info (12128): Elaborating entity "vga" for hierarchy "vga:i_vga" File: /home/zlobec/digital/yrv-omdazz/Plus/boards/omdazz/top.sv Line: 302
+Warning (10230): Verilog HDL assignment warning at vga.sv(91): truncated value with size 32 to match size of target (4) File: /home/zlobec/digital/yrv-omdazz/Plus/boards/omdazz/vga.sv Line: 91
+Warning (12125): Using design file /home/zlobec/digital/yrv-omdazz/Plus/boards/omdazz/ps2scan.v, which is not specified as a design file for the current project, but contains definitions for 1 design units and 1 entities in project
+    Info (12023): Found entity 1: ps2scan File: /home/zlobec/digital/yrv-omdazz/Plus/boards/omdazz/ps2scan.v Line: 3
+Info (12128): Elaborating entity "ps2scan" for hierarchy "ps2scan:ps2scan" File: /home/zlobec/digital/yrv-omdazz/Plus/boards/omdazz/top.sv Line: 459
+Warning (10036): Verilog HDL or VHDL warning at ps2scan.v(12): object "passed" assigned a value but never read File: /home/zlobec/digital/yrv-omdazz/Plus/boards/omdazz/ps2scan.v Line: 12
+Warning (10036): Verilog HDL or VHDL warning at ps2scan.v(13): object "failed" assigned a value but never read File: /home/zlobec/digital/yrv-omdazz/Plus/boards/omdazz/ps2scan.v Line: 13
+Warning (10036): Verilog HDL or VHDL warning at ps2scan.v(21): object "parity_good" assigned a value but never read File: /home/zlobec/digital/yrv-omdazz/Plus/boards/omdazz/ps2scan.v Line: 21
+Warning (10036): Verilog HDL or VHDL warning at ps2scan.v(22): object "start_good" assigned a value but never read File: /home/zlobec/digital/yrv-omdazz/Plus/boards/omdazz/ps2scan.v Line: 22
+Warning (10036): Verilog HDL or VHDL warning at ps2scan.v(23): object "stop_good" assigned a value but never read File: /home/zlobec/digital/yrv-omdazz/Plus/boards/omdazz/ps2scan.v Line: 23
+Warning (10036): Verilog HDL or VHDL warning at ps2scan.v(138): object "code_3" assigned a value but never read File: /home/zlobec/digital/yrv-omdazz/Plus/boards/omdazz/ps2scan.v Line: 138
+Warning (10230): Verilog HDL assignment warning at ps2scan.v(189): truncated value with size 32 to match size of target (8) File: /home/zlobec/digital/yrv-omdazz/Plus/boards/omdazz/ps2scan.v Line: 189
+Warning (19016): Clock multiplexers are found and protected
+    Warning (19017): Found clock multiplexer muxed_clk_raw File: /home/zlobec/digital/yrv-omdazz/Plus/boards/omdazz/top.sv Line: 62
+Warning (276027): Inferred dual-clock RAM node "yrv_mcu:i_yrv_mcu|mcu_mem_rtl_0" from synchronous design logic.  The read-during-write behavior of a dual-clock RAM is undefined and may not match the behavior of the original design.
+Warning (276027): Inferred dual-clock RAM node "yrv_mcu:i_yrv_mcu|mcu_mem_rtl_1" from synchronous design logic.  The read-during-write behavior of a dual-clock RAM is undefined and may not match the behavior of the original design.
+Warning (276027): Inferred dual-clock RAM node "yrv_mcu:i_yrv_mcu|mcu_mem_rtl_2" from synchronous design logic.  The read-during-write behavior of a dual-clock RAM is undefined and may not match the behavior of the original design.
+Warning (276027): Inferred dual-clock RAM node "yrv_mcu:i_yrv_mcu|mcu_mem_rtl_3" from synchronous design logic.  The read-during-write behavior of a dual-clock RAM is undefined and may not match the behavior of the original design.
+Warning (276020): Inferred RAM node "text_mem_rtl_0" from synchronous design logic.  Pass-through logic has been added to match the read-during-write behavior of the original design.
+Warning (276027): Inferred dual-clock RAM node "yrv_mcu:i_yrv_mcu|yrv_top:YRV|yrv_cpu:CPU|regf_mem_rtl_0" from synchronous design logic.  The read-during-write behavior of a dual-clock RAM is undefined and may not match the behavior of the original design.
+Warning (276027): Inferred dual-clock RAM node "yrv_mcu:i_yrv_mcu|yrv_top:YRV|yrv_cpu:CPU|regf_mem_rtl_1" from synchronous design logic.  The read-during-write behavior of a dual-clock RAM is undefined and may not match the behavior of the original design.
+Info (276014): Found 1 instances of uninferred RAM logic
+    Info (276007): RAM logic "char" is uninferred due to asynchronous read logic File: /home/zlobec/digital/yrv-omdazz/Plus/boards/omdazz/top.sv Line: 141
+Info (19000): Inferred 7 megafunctions from design logic
+    Info (276029): Inferred altsyncram megafunction from the following design logic: "yrv_mcu:i_yrv_mcu|mcu_mem_rtl_0" 
+        Info (286033): Parameter OPERATION_MODE set to DUAL_PORT
+        Info (286033): Parameter WIDTH_A set to 8
+        Info (286033): Parameter WIDTHAD_A set to 12
+        Info (286033): Parameter NUMWORDS_A set to 4096
+        Info (286033): Parameter WIDTH_B set to 8
+        Info (286033): Parameter WIDTHAD_B set to 12
+        Info (286033): Parameter NUMWORDS_B set to 4096
+        Info (286033): Parameter ADDRESS_ACLR_A set to NONE
+        Info (286033): Parameter OUTDATA_REG_B set to UNREGISTERED
+        Info (286033): Parameter ADDRESS_ACLR_B set to NONE
+        Info (286033): Parameter OUTDATA_ACLR_B set to NONE
+        Info (286033): Parameter ADDRESS_REG_B set to CLOCK1
+        Info (286033): Parameter INDATA_ACLR_A set to NONE
+        Info (286033): Parameter WRCONTROL_ACLR_A set to NONE
+    Info (276029): Inferred altsyncram megafunction from the following design logic: "yrv_mcu:i_yrv_mcu|mcu_mem_rtl_1" 
+        Info (286033): Parameter OPERATION_MODE set to DUAL_PORT
+        Info (286033): Parameter WIDTH_A set to 8
+        Info (286033): Parameter WIDTHAD_A set to 12
+        Info (286033): Parameter NUMWORDS_A set to 4096
+        Info (286033): Parameter WIDTH_B set to 8
+        Info (286033): Parameter WIDTHAD_B set to 12
+        Info (286033): Parameter NUMWORDS_B set to 4096
+        Info (286033): Parameter ADDRESS_ACLR_A set to NONE
+        Info (286033): Parameter OUTDATA_REG_B set to UNREGISTERED
+        Info (286033): Parameter ADDRESS_ACLR_B set to NONE
+        Info (286033): Parameter OUTDATA_ACLR_B set to NONE
+        Info (286033): Parameter ADDRESS_REG_B set to CLOCK1
+        Info (286033): Parameter INDATA_ACLR_A set to NONE
+        Info (286033): Parameter WRCONTROL_ACLR_A set to NONE
+    Info (276029): Inferred altsyncram megafunction from the following design logic: "yrv_mcu:i_yrv_mcu|mcu_mem_rtl_2" 
+        Info (286033): Parameter OPERATION_MODE set to DUAL_PORT
+        Info (286033): Parameter WIDTH_A set to 8
+        Info (286033): Parameter WIDTHAD_A set to 12
+        Info (286033): Parameter NUMWORDS_A set to 4096
+        Info (286033): Parameter WIDTH_B set to 8
+        Info (286033): Parameter WIDTHAD_B set to 12
+        Info (286033): Parameter NUMWORDS_B set to 4096
+        Info (286033): Parameter ADDRESS_ACLR_A set to NONE
+        Info (286033): Parameter OUTDATA_REG_B set to UNREGISTERED
+        Info (286033): Parameter ADDRESS_ACLR_B set to NONE
+        Info (286033): Parameter OUTDATA_ACLR_B set to NONE
+        Info (286033): Parameter ADDRESS_REG_B set to CLOCK1
+        Info (286033): Parameter INDATA_ACLR_A set to NONE
+        Info (286033): Parameter WRCONTROL_ACLR_A set to NONE
+    Info (276029): Inferred altsyncram megafunction from the following design logic: "yrv_mcu:i_yrv_mcu|mcu_mem_rtl_3" 
+        Info (286033): Parameter OPERATION_MODE set to DUAL_PORT
+        Info (286033): Parameter WIDTH_A set to 8
+        Info (286033): Parameter WIDTHAD_A set to 12
+        Info (286033): Parameter NUMWORDS_A set to 4096
+        Info (286033): Parameter WIDTH_B set to 8
+        Info (286033): Parameter WIDTHAD_B set to 12
+        Info (286033): Parameter NUMWORDS_B set to 4096
+        Info (286033): Parameter ADDRESS_ACLR_A set to NONE
+        Info (286033): Parameter OUTDATA_REG_B set to UNREGISTERED
+        Info (286033): Parameter ADDRESS_ACLR_B set to NONE
+        Info (286033): Parameter OUTDATA_ACLR_B set to NONE
+        Info (286033): Parameter ADDRESS_REG_B set to CLOCK1
+        Info (286033): Parameter INDATA_ACLR_A set to NONE
+        Info (286033): Parameter WRCONTROL_ACLR_A set to NONE
+    Info (276029): Inferred altsyncram megafunction from the following design logic: "text_mem_rtl_0" 
+        Info (286033): Parameter OPERATION_MODE set to DUAL_PORT
+        Info (286033): Parameter WIDTH_A set to 8
+        Info (286033): Parameter WIDTHAD_A set to 13
+        Info (286033): Parameter NUMWORDS_A set to 4800
+        Info (286033): Parameter WIDTH_B set to 8
+        Info (286033): Parameter WIDTHAD_B set to 13
+        Info (286033): Parameter NUMWORDS_B set to 4800
+        Info (286033): Parameter ADDRESS_ACLR_A set to NONE
+        Info (286033): Parameter OUTDATA_REG_B set to UNREGISTERED
+        Info (286033): Parameter ADDRESS_ACLR_B set to NONE
+        Info (286033): Parameter OUTDATA_ACLR_B set to NONE
+        Info (286033): Parameter ADDRESS_REG_B set to CLOCK0
+        Info (286033): Parameter INDATA_ACLR_A set to NONE
+        Info (286033): Parameter WRCONTROL_ACLR_A set to NONE
+        Info (286033): Parameter READ_DURING_WRITE_MODE_MIXED_PORTS set to OLD_DATA
+    Info (276029): Inferred altsyncram megafunction from the following design logic: "yrv_mcu:i_yrv_mcu|yrv_top:YRV|yrv_cpu:CPU|regf_mem_rtl_0" 
+        Info (286033): Parameter OPERATION_MODE set to DUAL_PORT
+        Info (286033): Parameter WIDTH_A set to 32
+        Info (286033): Parameter WIDTHAD_A set to 5
+        Info (286033): Parameter NUMWORDS_A set to 32
+        Info (286033): Parameter WIDTH_B set to 32
+        Info (286033): Parameter WIDTHAD_B set to 5
+        Info (286033): Parameter NUMWORDS_B set to 32
+        Info (286033): Parameter ADDRESS_ACLR_A set to NONE
+        Info (286033): Parameter OUTDATA_REG_B set to UNREGISTERED
+        Info (286033): Parameter ADDRESS_ACLR_B set to NONE
+        Info (286033): Parameter OUTDATA_ACLR_B set to NONE
+        Info (286033): Parameter ADDRESS_REG_B set to CLOCK1
+        Info (286033): Parameter INDATA_ACLR_A set to NONE
+        Info (286033): Parameter WRCONTROL_ACLR_A set to NONE
+    Info (276029): Inferred altsyncram megafunction from the following design logic: "yrv_mcu:i_yrv_mcu|yrv_top:YRV|yrv_cpu:CPU|regf_mem_rtl_1" 
+        Info (286033): Parameter OPERATION_MODE set to DUAL_PORT
+        Info (286033): Parameter WIDTH_A set to 32
+        Info (286033): Parameter WIDTHAD_A set to 5
+        Info (286033): Parameter NUMWORDS_A set to 32
+        Info (286033): Parameter WIDTH_B set to 32
+        Info (286033): Parameter WIDTHAD_B set to 5
+        Info (286033): Parameter NUMWORDS_B set to 32
+        Info (286033): Parameter ADDRESS_ACLR_A set to NONE
+        Info (286033): Parameter OUTDATA_REG_B set to UNREGISTERED
+        Info (286033): Parameter ADDRESS_ACLR_B set to NONE
+        Info (286033): Parameter OUTDATA_ACLR_B set to NONE
+        Info (286033): Parameter ADDRESS_REG_B set to CLOCK1
+        Info (286033): Parameter INDATA_ACLR_A set to NONE
+        Info (286033): Parameter WRCONTROL_ACLR_A set to NONE
+Info (12130): Elaborated megafunction instantiation "yrv_mcu:i_yrv_mcu|altsyncram:mcu_mem_rtl_0"
+Info (12133): Instantiated megafunction "yrv_mcu:i_yrv_mcu|altsyncram:mcu_mem_rtl_0" with the following parameter:
+    Info (12134): Parameter "OPERATION_MODE" = "DUAL_PORT"
+    Info (12134): Parameter "WIDTH_A" = "8"
+    Info (12134): Parameter "WIDTHAD_A" = "12"
+    Info (12134): Parameter "NUMWORDS_A" = "4096"
+    Info (12134): Parameter "WIDTH_B" = "8"
+    Info (12134): Parameter "WIDTHAD_B" = "12"
+    Info (12134): Parameter "NUMWORDS_B" = "4096"
+    Info (12134): Parameter "ADDRESS_ACLR_A" = "NONE"
+    Info (12134): Parameter "OUTDATA_REG_B" = "UNREGISTERED"
+    Info (12134): Parameter "ADDRESS_ACLR_B" = "NONE"
+    Info (12134): Parameter "OUTDATA_ACLR_B" = "NONE"
+    Info (12134): Parameter "ADDRESS_REG_B" = "CLOCK1"
+    Info (12134): Parameter "INDATA_ACLR_A" = "NONE"
+    Info (12134): Parameter "WRCONTROL_ACLR_A" = "NONE"
+Info (12021): Found 1 design units, including 1 entities, in source file db/altsyncram_20e1.tdf
+    Info (12023): Found entity 1: altsyncram_20e1 File: /home/zlobec/digital/yrv-omdazz/Plus/boards/omdazz/run/db/altsyncram_20e1.tdf Line: 28
+Info (12130): Elaborated megafunction instantiation "altsyncram:text_mem_rtl_0"
+Info (12133): Instantiated megafunction "altsyncram:text_mem_rtl_0" with the following parameter:
+    Info (12134): Parameter "OPERATION_MODE" = "DUAL_PORT"
+    Info (12134): Parameter "WIDTH_A" = "8"
+    Info (12134): Parameter "WIDTHAD_A" = "13"
+    Info (12134): Parameter "NUMWORDS_A" = "4800"
+    Info (12134): Parameter "WIDTH_B" = "8"
+    Info (12134): Parameter "WIDTHAD_B" = "13"
+    Info (12134): Parameter "NUMWORDS_B" = "4800"
+    Info (12134): Parameter "ADDRESS_ACLR_A" = "NONE"
+    Info (12134): Parameter "OUTDATA_REG_B" = "UNREGISTERED"
+    Info (12134): Parameter "ADDRESS_ACLR_B" = "NONE"
+    Info (12134): Parameter "OUTDATA_ACLR_B" = "NONE"
+    Info (12134): Parameter "ADDRESS_REG_B" = "CLOCK0"
+    Info (12134): Parameter "INDATA_ACLR_A" = "NONE"
+    Info (12134): Parameter "WRCONTROL_ACLR_A" = "NONE"
+    Info (12134): Parameter "READ_DURING_WRITE_MODE_MIXED_PORTS" = "OLD_DATA"
+Info (12021): Found 1 design units, including 1 entities, in source file db/altsyncram_03h1.tdf
+    Info (12023): Found entity 1: altsyncram_03h1 File: /home/zlobec/digital/yrv-omdazz/Plus/boards/omdazz/run/db/altsyncram_03h1.tdf Line: 28
+Info (12130): Elaborated megafunction instantiation "yrv_mcu:i_yrv_mcu|yrv_top:YRV|yrv_cpu:CPU|altsyncram:regf_mem_rtl_0"
+Info (12133): Instantiated megafunction "yrv_mcu:i_yrv_mcu|yrv_top:YRV|yrv_cpu:CPU|altsyncram:regf_mem_rtl_0" with the following parameter:
+    Info (12134): Parameter "OPERATION_MODE" = "DUAL_PORT"
+    Info (12134): Parameter "WIDTH_A" = "32"
+    Info (12134): Parameter "WIDTHAD_A" = "5"
+    Info (12134): Parameter "NUMWORDS_A" = "32"
+    Info (12134): Parameter "WIDTH_B" = "32"
+    Info (12134): Parameter "WIDTHAD_B" = "5"
+    Info (12134): Parameter "NUMWORDS_B" = "32"
+    Info (12134): Parameter "ADDRESS_ACLR_A" = "NONE"
+    Info (12134): Parameter "OUTDATA_REG_B" = "UNREGISTERED"
+    Info (12134): Parameter "ADDRESS_ACLR_B" = "NONE"
+    Info (12134): Parameter "OUTDATA_ACLR_B" = "NONE"
+    Info (12134): Parameter "ADDRESS_REG_B" = "CLOCK1"
+    Info (12134): Parameter "INDATA_ACLR_A" = "NONE"
+    Info (12134): Parameter "WRCONTROL_ACLR_A" = "NONE"
+Info (12021): Found 1 design units, including 1 entities, in source file db/altsyncram_4pd1.tdf
+    Info (12023): Found entity 1: altsyncram_4pd1 File: /home/zlobec/digital/yrv-omdazz/Plus/boards/omdazz/run/db/altsyncram_4pd1.tdf Line: 28
+Warning (12241): 1 hierarchies have connectivity warnings - see the Connectivity Checks report folder
+Warning (13039): The following bidirectional pins have no drivers
+    Warning (13040): bidirectional pin "sram_io[0]" has no driver File: /home/zlobec/digital/yrv-omdazz/Plus/boards/omdazz/top.sv Line: 28
+    Warning (13040): bidirectional pin "sram_io[1]" has no driver File: /home/zlobec/digital/yrv-omdazz/Plus/boards/omdazz/top.sv Line: 28
+    Warning (13040): bidirectional pin "sram_io[2]" has no driver File: /home/zlobec/digital/yrv-omdazz/Plus/boards/omdazz/top.sv Line: 28
+    Warning (13040): bidirectional pin "sram_io[3]" has no driver File: /home/zlobec/digital/yrv-omdazz/Plus/boards/omdazz/top.sv Line: 28
+    Warning (13040): bidirectional pin "sram_io[4]" has no driver File: /home/zlobec/digital/yrv-omdazz/Plus/boards/omdazz/top.sv Line: 28
+    Warning (13040): bidirectional pin "sram_io[5]" has no driver File: /home/zlobec/digital/yrv-omdazz/Plus/boards/omdazz/top.sv Line: 28
+    Warning (13040): bidirectional pin "sram_io[6]" has no driver File: /home/zlobec/digital/yrv-omdazz/Plus/boards/omdazz/top.sv Line: 28
+    Warning (13040): bidirectional pin "sram_io[7]" has no driver File: /home/zlobec/digital/yrv-omdazz/Plus/boards/omdazz/top.sv Line: 28
+Info (13000): Registers with preset signals will power-up high File: /home/zlobec/digital/yrv-omdazz/Plus/design/display_dynamic.sv Line: 58
+Info (13003): DEV_CLRn pin will set, and not reset, register with preset signal due to NOT Gate Push-Back
+Warning (13024): Output pins are stuck at VCC or GND
+    Warning (13410): Pin "buzzer" is stuck at VCC File: /home/zlobec/digital/yrv-omdazz/Plus/boards/omdazz/top.sv Line: 17
+    Warning (13410): Pin "sram_a[0]" is stuck at GND File: /home/zlobec/digital/yrv-omdazz/Plus/boards/omdazz/top.sv Line: 23
+    Warning (13410): Pin "sram_a[1]" is stuck at GND File: /home/zlobec/digital/yrv-omdazz/Plus/boards/omdazz/top.sv Line: 23
+    Warning (13410): Pin "sram_a[2]" is stuck at GND File: /home/zlobec/digital/yrv-omdazz/Plus/boards/omdazz/top.sv Line: 23
+    Warning (13410): Pin "sram_a[3]" is stuck at GND File: /home/zlobec/digital/yrv-omdazz/Plus/boards/omdazz/top.sv Line: 23
+    Warning (13410): Pin "sram_a[4]" is stuck at GND File: /home/zlobec/digital/yrv-omdazz/Plus/boards/omdazz/top.sv Line: 23
+    Warning (13410): Pin "sram_a[5]" is stuck at GND File: /home/zlobec/digital/yrv-omdazz/Plus/boards/omdazz/top.sv Line: 23
+    Warning (13410): Pin "sram_a[6]" is stuck at GND File: /home/zlobec/digital/yrv-omdazz/Plus/boards/omdazz/top.sv Line: 23
+    Warning (13410): Pin "sram_a[7]" is stuck at GND File: /home/zlobec/digital/yrv-omdazz/Plus/boards/omdazz/top.sv Line: 23
+    Warning (13410): Pin "sram_a[8]" is stuck at GND File: /home/zlobec/digital/yrv-omdazz/Plus/boards/omdazz/top.sv Line: 23
+    Warning (13410): Pin "sram_a[9]" is stuck at GND File: /home/zlobec/digital/yrv-omdazz/Plus/boards/omdazz/top.sv Line: 23
+    Warning (13410): Pin "sram_a[10]" is stuck at GND File: /home/zlobec/digital/yrv-omdazz/Plus/boards/omdazz/top.sv Line: 23
+    Warning (13410): Pin "sram_a[11]" is stuck at GND File: /home/zlobec/digital/yrv-omdazz/Plus/boards/omdazz/top.sv Line: 23
+    Warning (13410): Pin "sram_a[12]" is stuck at GND File: /home/zlobec/digital/yrv-omdazz/Plus/boards/omdazz/top.sv Line: 23
+    Warning (13410): Pin "sram_a[13]" is stuck at GND File: /home/zlobec/digital/yrv-omdazz/Plus/boards/omdazz/top.sv Line: 23
+    Warning (13410): Pin "sram_a[14]" is stuck at GND File: /home/zlobec/digital/yrv-omdazz/Plus/boards/omdazz/top.sv Line: 23
+    Warning (13410): Pin "sram_a[15]" is stuck at GND File: /home/zlobec/digital/yrv-omdazz/Plus/boards/omdazz/top.sv Line: 23
+    Warning (13410): Pin "sram_a[16]" is stuck at GND File: /home/zlobec/digital/yrv-omdazz/Plus/boards/omdazz/top.sv Line: 23
+    Warning (13410): Pin "sram_n_cs1" is stuck at GND File: /home/zlobec/digital/yrv-omdazz/Plus/boards/omdazz/top.sv Line: 24
+    Warning (13410): Pin "sram_cs2" is stuck at GND File: /home/zlobec/digital/yrv-omdazz/Plus/boards/omdazz/top.sv Line: 25
+    Warning (13410): Pin "sram_n_oe" is stuck at GND File: /home/zlobec/digital/yrv-omdazz/Plus/boards/omdazz/top.sv Line: 26
+    Warning (13410): Pin "sram_n_we" is stuck at GND File: /home/zlobec/digital/yrv-omdazz/Plus/boards/omdazz/top.sv Line: 27
+Info (286030): Timing-Driven Synthesis is running
+Info (17049): 2 registers lost all their fanouts during netlist optimizations.
+Info (144001): Generated suppressed messages file /home/zlobec/digital/yrv-omdazz/Plus/boards/omdazz/run/top.map.smsg
+Info (16010): Generating hard_block partition "hard_block:auto_generated_inst"
+    Info (16011): Adding 0 node(s), including 0 DDIO, 0 PLL, 0 transceiver and 0 LCELL
+Info (21057): Implemented 6290 device resources after synthesis - the final resource count might be different
+    Info (21058): Implemented 9 input pins
+    Info (21059): Implemented 43 output pins
+    Info (21060): Implemented 8 bidirectional pins
+    Info (21061): Implemented 6126 logic cells
+    Info (21064): Implemented 104 RAM segments
+Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 102 warnings
+    Info: Peak virtual memory: 2379 megabytes
+    Info: Processing ended: Sun Mar 19 13:07:49 2023
+    Info: Elapsed time: 00:02:41
+    Info: Total CPU time (on all processors): 00:02:56
+Warning (125092): Tcl Script File top_extra.qsf not found
+Info: *******************************************************************
+Info: Running Quartus Prime Fitter
+    Info: Version 22.1std.0 Build 915 10/25/2022 SC Lite Edition
+    Info: Processing started: Sun Mar 19 13:07:51 2023
+Info: Command: quartus_fit --read_settings_files=off --write_settings_files=off top -c top
+Info: qfit2_default_script.tcl version: #1
+Info: Project  = top
+Info: Revision = top
+Info (20032): Parallel compilation is enabled and will use up to 4 processors
+Info (119006): Selected device EP4CE6E22C8 for design "top"
+Info (21076): High junction temperature operating condition is not set. Assuming a default value of '85'.
+Info (21076): Low junction temperature operating condition is not set. Assuming a default value of '0'.
+Info (171003): Fitter is performing an Auto Fit compilation, which may decrease Fitter effort to reduce compilation time
+Warning (292013): Feature LogicLock is only available with a valid subscription license. You can purchase a software subscription to gain full access to this feature.
+Info (176444): Device migration not selected. If you intend to use device migration later, you may need to change the pin assignments as they may be incompatible with other devices
+    Info (176445): Device EP4CE10E22C8 is compatible
+    Info (176445): Device EP4CE15E22C8 is compatible
+    Info (176445): Device EP4CE22E22C8 is compatible
+Info (169124): Fitter converted 4 user pins into dedicated programming pins
+    Info (169125): Pin ~ALTERA_ASDO_DATA1~ is reserved at location 6
+    Info (169125): Pin ~ALTERA_FLASH_nCE_nCSO~ is reserved at location 8
+    Info (169125): Pin ~ALTERA_DCLK~ is reserved at location 12
+    Info (169125): Pin ~ALTERA_DATA0~ is reserved at location 13
+Warning (15714): Some pins have incomplete I/O assignments. Refer to the I/O Assignment Warnings report for details
+Info (176045): Design uses memory blocks. Violating setup or hold times of memory block address registers for either read or write operations could cause memory contents to be corrupted. Make sure that all memory block address registers meet the setup and hold time requirements.
+Critical Warning (169085): No exact pin location assignment(s) for 29 pins of 60 total pins. For the list of pins please refer to the I/O Assignment Warnings table in the fitter report.
+Info (332104): Reading SDC File: '../top.sdc'
+Info (332151): Clock uncertainty is not calculated until you update the timing netlist.
+Warning (332174): Ignored filter at top.sdc(7): ir could not be matched with a clock or keeper or register or port or pin or cell or partition File: /home/zlobec/digital/yrv-omdazz/Plus/boards/omdazz/top.sdc Line: 7
+Warning (332049): Ignored set_false_path at top.sdc(7): Argument <from> is not an object ID File: /home/zlobec/digital/yrv-omdazz/Plus/boards/omdazz/top.sdc Line: 7
+    Info (332050): set_false_path -from ir -to [all_clocks] File: /home/zlobec/digital/yrv-omdazz/Plus/boards/omdazz/top.sdc Line: 7
+Warning (332174): Ignored filter at top.sdc(16): tx could not be matched with a clock or keeper or register or port or pin or cell or partition File: /home/zlobec/digital/yrv-omdazz/Plus/boards/omdazz/top.sdc Line: 16
+Warning (332049): Ignored set_false_path at top.sdc(16): Argument <to> is not an object ID File: /home/zlobec/digital/yrv-omdazz/Plus/boards/omdazz/top.sdc Line: 16
+    Info (332050): set_false_path -from * -to tx File: /home/zlobec/digital/yrv-omdazz/Plus/boards/omdazz/top.sdc Line: 16
+Warning (332060): Node: vga_clock was determined to be a clock but was found without an associated clock assignment.
+    Info (13166): Register character[2] is being clocked by vga_clock
+Warning (332060): Node: key_sw[0] was determined to be a clock but was found without an associated clock assignment.
+    Info (13166): Register mem_ble_reg[1] is being clocked by key_sw[0]
+Warning (332060): Node: clk_cnt[22] was determined to be a clock but was found without an associated clock assignment.
+    Info (13166): Register random[7] is being clocked by clk_cnt[22]
+Warning (332060): Node: ps2scan:ps2scan|num[0] was determined to be a clock but was found without an associated clock assignment.
+    Info (13166): Register ps2scan:ps2scan|ps2_byte_r[0] is being clocked by ps2scan:ps2scan|num[0]
+Warning (332060): Node: ps2k_clk was determined to be a clock but was found without an associated clock assignment.
+    Info (13166): Register ps2scan:ps2scan|temp_data[4] is being clocked by ps2k_clk
+Warning (332060): Node: vga:i_vga|hsync was determined to be a clock but was found without an associated clock assignment.
+    Info (13166): Register row_pos[2] is being clocked by vga:i_vga|hsync
+Info (332154): The derive_clock_uncertainty command did not apply clock uncertainty to any clock-to-clock transfers.
+Info (332129): Detected timing requirements -- optimizing circuit to achieve only the specified requirements
+Info (332111): Found 1 clocks
+    Info (332111):   Period   Clock Name
+    Info (332111): ======== ============
+    Info (332111):   20.000          clk
+Info (176352): Promoted node muxed_clk_raw  File: /home/zlobec/digital/yrv-omdazz/Plus/boards/omdazz/top.sv Line: 62
+    Info (176354): Promoted destinations to use location or clock signal Global Clock
+Info (176353): Automatically promoted node clk~input (placed in PIN 23 (CLK1, DIFFCLK_0n)) File: /home/zlobec/digital/yrv-omdazz/Plus/boards/omdazz/top.sv Line: 8
+    Info (176355): Automatically promoted destinations to use location or clock signal Global Clock CLKCTRL_G2
+    Info (176356): Following destination nodes may be non-global or may not use global or regional clocks
+        Info (176357): Destination node vga:i_vga|hsync File: /home/zlobec/digital/yrv-omdazz/Plus/boards/omdazz/vga.sv Line: 30
+        Info (176357): Destination node clk_cnt[1] File: /home/zlobec/digital/yrv-omdazz/Plus/boards/omdazz/top.sv Line: 59
+        Info (176357): Destination node clk_cnt[22] File: /home/zlobec/digital/yrv-omdazz/Plus/boards/omdazz/top.sv Line: 51
+        Info (176357): Destination node vga_clock File: /home/zlobec/digital/yrv-omdazz/Plus/boards/omdazz/top.sv Line: 359
+Info (176353): Automatically promoted node vga_clock  File: /home/zlobec/digital/yrv-omdazz/Plus/boards/omdazz/top.sv Line: 359
+    Info (176355): Automatically promoted destinations to use location or clock signal Global Clock
+    Info (176356): Following destination nodes may be non-global or may not use global or regional clocks
+        Info (176357): Destination node vga_clock~0 File: /home/zlobec/digital/yrv-omdazz/Plus/boards/omdazz/top.sv Line: 359
+Info (176353): Automatically promoted node ps2scan:ps2scan|WideNor0  File: /home/zlobec/digital/yrv-omdazz/Plus/boards/omdazz/ps2scan.v Line: 133
+    Info (176355): Automatically promoted destinations to use location or clock signal Global Clock
+    Info (176356): Following destination nodes may be non-global or may not use global or regional clocks
+        Info (176357): Destination node ps2scan:ps2scan|newkey~0 File: /home/zlobec/digital/yrv-omdazz/Plus/boards/omdazz/ps2scan.v Line: 122
+        Info (176357): Destination node ps2scan:ps2scan|newcode2 File: /home/zlobec/digital/yrv-omdazz/Plus/boards/omdazz/ps2scan.v Line: 121
+Info (176353): Automatically promoted node clk_cnt[22]  File: /home/zlobec/digital/yrv-omdazz/Plus/boards/omdazz/top.sv Line: 51
+    Info (176355): Automatically promoted destinations to use location or clock signal Global Clock
+    Info (176356): Following destination nodes may be non-global or may not use global or regional clocks
+        Info (176357): Destination node clk_cnt[22]~64 File: /home/zlobec/digital/yrv-omdazz/Plus/boards/omdazz/top.sv Line: 51
+        Info (176357): Destination node muxed_clk_raw File: /home/zlobec/digital/yrv-omdazz/Plus/boards/omdazz/top.sv Line: 62
+Info (176353): Automatically promoted node vga:i_vga|hsync  File: /home/zlobec/digital/yrv-omdazz/Plus/boards/omdazz/vga.sv Line: 30
+    Info (176355): Automatically promoted destinations to use location or clock signal Global Clock
+    Info (176356): Following destination nodes may be non-global or may not use global or regional clocks
+        Info (176357): Destination node hsync~output File: /home/zlobec/digital/yrv-omdazz/Plus/boards/omdazz/top.sv Line: 19
+Info (176353): Automatically promoted node reset_n~input (placed in PIN 25 (CLK3, DIFFCLK_1n)) File: /home/zlobec/digital/yrv-omdazz/Plus/boards/omdazz/top.sv Line: 9
+    Info (176355): Automatically promoted destinations to use location or clock signal Global Clock CLKCTRL_G3
+    Info (176356): Following destination nodes may be non-global or may not use global or regional clocks
+        Info (176357): Destination node yrv_mcu:i_yrv_mcu|top_resetb~0 File: /home/zlobec/digital/yrv-omdazz/Plus/design/yrv_mcu.v Line: 161
+        Info (176357): Destination node ps2scan:ps2scan|ps2_byte_r[0]~0 File: /home/zlobec/digital/yrv-omdazz/Plus/boards/omdazz/ps2scan.v Line: 103
+        Info (176357): Destination node yrv_mcu:i_yrv_mcu|port7_reg[2]~0 File: /home/zlobec/digital/yrv-omdazz/Plus/design/yrv_mcu.v Line: 358
+Info (176353): Automatically promoted node yrv_mcu:i_yrv_mcu|top_resetb~0  File: /home/zlobec/digital/yrv-omdazz/Plus/design/yrv_mcu.v Line: 161
+    Info (176355): Automatically promoted destinations to use location or clock signal Global Clock
+Info (176233): Starting register packing
+Info (176235): Finished register packing
+    Extra Info (176219): No registers were packed into other blocks
+Info (176214): Statistics of I/O pins that need to be placed that use the same VCCIO and VREF, before I/O pin placement
+    Info (176211): Number of I/O pins in group: 29 (unused VREF, 3.3V VCCIO, 0 input, 21 output, 8 bidirectional)
+        Info (176212): I/O standards used: 3.3-V LVTTL.
+Info (176215): I/O bank details before I/O pin placement
+    Info (176214): Statistics of I/O banks
+        Info (176213): I/O bank number 1 does not use VREF pins and has undetermined VCCIO pins. 5 total pin(s) used --  6 pins available
+        Info (176213): I/O bank number 2 does not use VREF pins and has undetermined VCCIO pins. 1 total pin(s) used --  7 pins available
+        Info (176213): I/O bank number 3 does not use VREF pins and has undetermined VCCIO pins. 0 total pin(s) used --  11 pins available
+        Info (176213): I/O bank number 4 does not use VREF pins and has undetermined VCCIO pins. 0 total pin(s) used --  14 pins available
+        Info (176213): I/O bank number 5 does not use VREF pins and has 3.3V VCCIO pins. 6 total pin(s) used --  7 pins available
+        Info (176213): I/O bank number 6 does not use VREF pins and has 3.3V VCCIO pins. 7 total pin(s) used --  3 pins available
+        Info (176213): I/O bank number 7 does not use VREF pins and has 3.3V VCCIO pins. 9 total pin(s) used --  4 pins available
+        Info (176213): I/O bank number 8 does not use VREF pins and has 3.3V VCCIO pins. 7 total pin(s) used --  5 pins available
+Warning (15705): Ignored locations or region assignments to the following nodes
+    Warning (15706): Node "gpio[0]" is assigned to location or region, but does not exist in design
+    Warning (15706): Node "gpio[10]" is assigned to location or region, but does not exist in design
+    Warning (15706): Node "gpio[11]" is assigned to location or region, but does not exist in design
+    Warning (15706): Node "gpio[12]" is assigned to location or region, but does not exist in design
+    Warning (15706): Node "gpio[13]" is assigned to location or region, but does not exist in design
+    Warning (15706): Node "gpio[1]" is assigned to location or region, but does not exist in design
+    Warning (15706): Node "gpio[2]" is assigned to location or region, but does not exist in design
+    Warning (15706): Node "gpio[3]" is assigned to location or region, but does not exist in design
+    Warning (15706): Node "gpio[4]" is assigned to location or region, but does not exist in design
+    Warning (15706): Node "gpio[5]" is assigned to location or region, but does not exist in design
+    Warning (15706): Node "gpio[6]" is assigned to location or region, but does not exist in design
+    Warning (15706): Node "gpio[7]" is assigned to location or region, but does not exist in design
+    Warning (15706): Node "gpio[8]" is assigned to location or region, but does not exist in design
+    Warning (15706): Node "gpio[9]" is assigned to location or region, but does not exist in design
+    Warning (15706): Node "ir" is assigned to location or region, but does not exist in design
+    Warning (15706): Node "tx" is assigned to location or region, but does not exist in design
+Info (171121): Fitter preparation operations ending: elapsed time is 00:00:05
+Info (14896): Fitter has disabled Advanced Physical Optimization because it is not supported for the current family.
+Info (170189): Fitter placement preparation operations beginning
+Info (170190): Fitter placement preparation operations ending: elapsed time is 00:00:01
+Info (170191): Fitter placement operations beginning
+Info (170137): Fitter placement was successful
+Info (170192): Fitter placement operations ending: elapsed time is 00:00:03
+Info (170193): Fitter routing operations beginning
+Info (170195): Router estimated average interconnect usage is 17% of the available device resources
+    Info (170196): Router estimated peak interconnect usage is 37% of the available device resources in the region that extends from location X11_Y0 to location X22_Y11
+Info (170199): The Fitter performed an Auto Fit compilation.  Optimizations were skipped to reduce compilation time.
+    Info (170201): Optimizations that may affect the design's routability were skipped
+    Info (170200): Optimizations that may affect the design's timing were skipped
+Info (170194): Fitter routing operations ending: elapsed time is 00:00:04
+Info (11888): Total time spent on timing analysis during the Fitter is 0.88 seconds.
+Info (334003): Started post-fitting delay annotation
+Info (334004): Delay annotation completed successfully
+Info (334003): Started post-fitting delay annotation
+Info (334004): Delay annotation completed successfully
+Info (11218): Fitter post-fit operations ending: elapsed time is 00:00:05
+Warning (171167): Found invalid Fitter assignments. See the Ignored Assignments panel in the Fitter Compilation Report for more information.
+Warning (169177): 17 pins must meet Intel FPGA requirements for 3.3-, 3.0-, and 2.5-V interfaces. For more information, refer to AN 447: Interfacing Cyclone IV E Devices with 3.3/3.0/2.5-V LVTTL/LVCMOS I/O Systems.
+    Info (169178): Pin sram_io[0] uses I/O standard 3.3-V LVTTL at 52 File: /home/zlobec/digital/yrv-omdazz/Plus/boards/omdazz/top.sv Line: 28
+    Info (169178): Pin sram_io[1] uses I/O standard 3.3-V LVTTL at 7 File: /home/zlobec/digital/yrv-omdazz/Plus/boards/omdazz/top.sv Line: 28
+    Info (169178): Pin sram_io[2] uses I/O standard 3.3-V LVTTL at 44 File: /home/zlobec/digital/yrv-omdazz/Plus/boards/omdazz/top.sv Line: 28
+    Info (169178): Pin sram_io[3] uses I/O standard 3.3-V LVTTL at 142 File: /home/zlobec/digital/yrv-omdazz/Plus/boards/omdazz/top.sv Line: 28
+    Info (169178): Pin sram_io[4] uses I/O standard 3.3-V LVTTL at 38 File: /home/zlobec/digital/yrv-omdazz/Plus/boards/omdazz/top.sv Line: 28
+    Info (169178): Pin sram_io[5] uses I/O standard 3.3-V LVTTL at 64 File: /home/zlobec/digital/yrv-omdazz/Plus/boards/omdazz/top.sv Line: 28
+    Info (169178): Pin sram_io[6] uses I/O standard 3.3-V LVTTL at 141 File: /home/zlobec/digital/yrv-omdazz/Plus/boards/omdazz/top.sv Line: 28
+    Info (169178): Pin sram_io[7] uses I/O standard 3.3-V LVTTL at 77 File: /home/zlobec/digital/yrv-omdazz/Plus/boards/omdazz/top.sv Line: 28
+    Info (169178): Pin key_sw[0] uses I/O standard 3.3-V LVTTL at 91 File: /home/zlobec/digital/yrv-omdazz/Plus/boards/omdazz/top.sv Line: 11
+    Info (169178): Pin reset_n uses I/O standard 3.3-V LVTTL at 25 File: /home/zlobec/digital/yrv-omdazz/Plus/boards/omdazz/top.sv Line: 9
+    Info (169178): Pin key_sw[2] uses I/O standard 3.3-V LVTTL at 89 File: /home/zlobec/digital/yrv-omdazz/Plus/boards/omdazz/top.sv Line: 11
+    Info (169178): Pin key_sw[1] uses I/O standard 3.3-V LVTTL at 90 File: /home/zlobec/digital/yrv-omdazz/Plus/boards/omdazz/top.sv Line: 11
+    Info (169178): Pin key_sw[3] uses I/O standard 3.3-V LVTTL at 88 File: /home/zlobec/digital/yrv-omdazz/Plus/boards/omdazz/top.sv Line: 11
+    Info (169178): Pin clk uses I/O standard 3.3-V LVTTL at 23 File: /home/zlobec/digital/yrv-omdazz/Plus/boards/omdazz/top.sv Line: 8
+    Info (169178): Pin rx uses I/O standard 3.3-V LVTTL at 115 File: /home/zlobec/digital/yrv-omdazz/Plus/boards/omdazz/top.sv Line: 35
+    Info (169178): Pin ps2k_data uses I/O standard 3.3-V LVTTL at 120 File: /home/zlobec/digital/yrv-omdazz/Plus/boards/omdazz/top.sv Line: 32
+    Info (169178): Pin ps2k_clk uses I/O standard 3.3-V LVTTL at 119 File: /home/zlobec/digital/yrv-omdazz/Plus/boards/omdazz/top.sv Line: 29
+Warning (169064): Following 8 pins have no output enable or a GND or VCC output enable - later changes to this connectivity may change fitting results
+    Info (169065): Pin sram_io[0] has a permanently disabled output enable File: /home/zlobec/digital/yrv-omdazz/Plus/boards/omdazz/top.sv Line: 28
+    Info (169065): Pin sram_io[1] has a permanently disabled output enable File: /home/zlobec/digital/yrv-omdazz/Plus/boards/omdazz/top.sv Line: 28
+    Info (169065): Pin sram_io[2] has a permanently disabled output enable File: /home/zlobec/digital/yrv-omdazz/Plus/boards/omdazz/top.sv Line: 28
+    Info (169065): Pin sram_io[3] has a permanently disabled output enable File: /home/zlobec/digital/yrv-omdazz/Plus/boards/omdazz/top.sv Line: 28
+    Info (169065): Pin sram_io[4] has a permanently disabled output enable File: /home/zlobec/digital/yrv-omdazz/Plus/boards/omdazz/top.sv Line: 28
+    Info (169065): Pin sram_io[5] has a permanently disabled output enable File: /home/zlobec/digital/yrv-omdazz/Plus/boards/omdazz/top.sv Line: 28
+    Info (169065): Pin sram_io[6] has a permanently disabled output enable File: /home/zlobec/digital/yrv-omdazz/Plus/boards/omdazz/top.sv Line: 28
+    Info (169065): Pin sram_io[7] has a permanently disabled output enable File: /home/zlobec/digital/yrv-omdazz/Plus/boards/omdazz/top.sv Line: 28
+Info (144001): Generated suppressed messages file /home/zlobec/digital/yrv-omdazz/Plus/boards/omdazz/run/top.fit.smsg
+Info: Quartus Prime Fitter was successful. 0 errors, 34 warnings
+    Info: Peak virtual memory: 1013 megabytes
+    Info: Processing ended: Sun Mar 19 13:08:16 2023
+    Info: Elapsed time: 00:00:25
+    Info: Total CPU time (on all processors): 00:00:35
+Info: *******************************************************************
+Info: Running Quartus Prime Assembler
+    Info: Version 22.1std.0 Build 915 10/25/2022 SC Lite Edition
+    Info: Processing started: Sun Mar 19 13:08:17 2023
+Info: Command: quartus_asm --read_settings_files=off --write_settings_files=off top -c top
+Warning (125092): Tcl Script File top_extra.qsf not found
+Info (115031): Writing out detailed assembly data for power analysis
+Info (115030): Assembler is generating device programming files
+Info: Quartus Prime Assembler was successful. 0 errors, 1 warning
+    Info: Peak virtual memory: 378 megabytes
+    Info: Processing ended: Sun Mar 19 13:08:18 2023
+    Info: Elapsed time: 00:00:01
+    Info: Total CPU time (on all processors): 00:00:01
+Info (293026): Skipped module Power Analyzer due to the assignment FLOW_ENABLE_POWER_ANALYZER
+Warning (125092): Tcl Script File top_extra.qsf not found
+Info: *******************************************************************
+Info: Running Quartus Prime Timing Analyzer
+    Info: Version 22.1std.0 Build 915 10/25/2022 SC Lite Edition
+    Info: Processing started: Sun Mar 19 13:08:20 2023
+Info: Command: quartus_sta top -c top
+Info: qsta_default_script.tcl version: #1
+Info (20032): Parallel compilation is enabled and will use up to 4 processors
+Info (21076): High junction temperature operating condition is not set. Assuming a default value of '85'.
+Info (21076): Low junction temperature operating condition is not set. Assuming a default value of '0'.
+Info (332104): Reading SDC File: '../top.sdc'
+Info (332151): Clock uncertainty is not calculated until you update the timing netlist.
+Warning (332174): Ignored filter at top.sdc(7): ir could not be matched with a clock or keeper or register or port or pin or cell or partition File: /home/zlobec/digital/yrv-omdazz/Plus/boards/omdazz/top.sdc Line: 7
+Warning (332049): Ignored set_false_path at top.sdc(7): Argument <from> is not an object ID File: /home/zlobec/digital/yrv-omdazz/Plus/boards/omdazz/top.sdc Line: 7
+    Info (332050): set_false_path -from ir -to [all_clocks] File: /home/zlobec/digital/yrv-omdazz/Plus/boards/omdazz/top.sdc Line: 7
+Warning (332174): Ignored filter at top.sdc(16): tx could not be matched with a clock or keeper or register or port or pin or cell or partition File: /home/zlobec/digital/yrv-omdazz/Plus/boards/omdazz/top.sdc Line: 16
+Warning (332049): Ignored set_false_path at top.sdc(16): Argument <to> is not an object ID File: /home/zlobec/digital/yrv-omdazz/Plus/boards/omdazz/top.sdc Line: 16
+    Info (332050): set_false_path -from * -to tx File: /home/zlobec/digital/yrv-omdazz/Plus/boards/omdazz/top.sdc Line: 16
+Warning (332060): Node: vga_clock was determined to be a clock but was found without an associated clock assignment.
+    Info (13166): Register character[2] is being clocked by vga_clock
+Warning (332060): Node: key_sw[0] was determined to be a clock but was found without an associated clock assignment.
+    Info (13166): Register mem_ble_reg[1] is being clocked by key_sw[0]
+Warning (332060): Node: clk_cnt[22] was determined to be a clock but was found without an associated clock assignment.
+    Info (13166): Register random[0] is being clocked by clk_cnt[22]
+Warning (332060): Node: ps2scan:ps2scan|num[0] was determined to be a clock but was found without an associated clock assignment.
+    Info (13166): Register ps2scan:ps2scan|ps2_byte_r[1] is being clocked by ps2scan:ps2scan|num[0]
+Warning (332060): Node: ps2k_clk was determined to be a clock but was found without an associated clock assignment.
+    Info (13166): Register ps2scan:ps2scan|temp_data[0] is being clocked by ps2k_clk
+Warning (332060): Node: vga:i_vga|hsync was determined to be a clock but was found without an associated clock assignment.
+    Info (13166): Register row_pos[2] is being clocked by vga:i_vga|hsync
+Info (332123): Deriving Clock Uncertainty. Please refer to report_sdc in the Timing Analyzer to see clock uncertainties.
+Info: Found TIMING_ANALYZER_REPORT_SCRIPT_INCLUDE_DEFAULT_ANALYSIS = ON
+Info: Analyzing Slow 1200mV 85C Model
+Info (332146): Worst-case setup slack is 7.143
+    Info (332119):     Slack       End Point TNS Clock 
+    Info (332119): ========= =================== =====================
+    Info (332119):     7.143               0.000 clk 
+Info (332146): Worst-case hold slack is 0.453
+    Info (332119):     Slack       End Point TNS Clock 
+    Info (332119): ========= =================== =====================
+    Info (332119):     0.453               0.000 clk 
+Info (332140): No Recovery paths to report
+Info (332140): No Removal paths to report
+Info (332146): Worst-case minimum pulse width slack is 9.549
+    Info (332119):     Slack       End Point TNS Clock 
+    Info (332119): ========= =================== =====================
+    Info (332119):     9.549               0.000 clk 
+Info: Analyzing Slow 1200mV 0C Model
+Info (334003): Started post-fitting delay annotation
+Info (334004): Delay annotation completed successfully
+Warning (332060): Node: vga_clock was determined to be a clock but was found without an associated clock assignment.
+    Info (13166): Register character[2] is being clocked by vga_clock
+Warning (332060): Node: key_sw[0] was determined to be a clock but was found without an associated clock assignment.
+    Info (13166): Register mem_ble_reg[1] is being clocked by key_sw[0]
+Warning (332060): Node: clk_cnt[22] was determined to be a clock but was found without an associated clock assignment.
+    Info (13166): Register random[0] is being clocked by clk_cnt[22]
+Warning (332060): Node: ps2scan:ps2scan|num[0] was determined to be a clock but was found without an associated clock assignment.
+    Info (13166): Register ps2scan:ps2scan|ps2_byte_r[1] is being clocked by ps2scan:ps2scan|num[0]
+Warning (332060): Node: ps2k_clk was determined to be a clock but was found without an associated clock assignment.
+    Info (13166): Register ps2scan:ps2scan|temp_data[0] is being clocked by ps2k_clk
+Warning (332060): Node: vga:i_vga|hsync was determined to be a clock but was found without an associated clock assignment.
+    Info (13166): Register row_pos[2] is being clocked by vga:i_vga|hsync
+Info (332123): Deriving Clock Uncertainty. Please refer to report_sdc in the Timing Analyzer to see clock uncertainties.
+Info (332146): Worst-case setup slack is 7.332
+    Info (332119):     Slack       End Point TNS Clock 
+    Info (332119): ========= =================== =====================
+    Info (332119):     7.332               0.000 clk 
+Info (332146): Worst-case hold slack is 0.401
+    Info (332119):     Slack       End Point TNS Clock 
+    Info (332119): ========= =================== =====================
+    Info (332119):     0.401               0.000 clk 
+Info (332140): No Recovery paths to report
+Info (332140): No Removal paths to report
+Info (332146): Worst-case minimum pulse width slack is 9.446
+    Info (332119):     Slack       End Point TNS Clock 
+    Info (332119): ========= =================== =====================
+    Info (332119):     9.446               0.000 clk 
+Info: Analyzing Fast 1200mV 0C Model
+Warning (332060): Node: vga_clock was determined to be a clock but was found without an associated clock assignment.
+    Info (13166): Register character[2] is being clocked by vga_clock
+Warning (332060): Node: key_sw[0] was determined to be a clock but was found without an associated clock assignment.
+    Info (13166): Register mem_ble_reg[1] is being clocked by key_sw[0]
+Warning (332060): Node: clk_cnt[22] was determined to be a clock but was found without an associated clock assignment.
+    Info (13166): Register random[0] is being clocked by clk_cnt[22]
+Warning (332060): Node: ps2scan:ps2scan|num[0] was determined to be a clock but was found without an associated clock assignment.
+    Info (13166): Register ps2scan:ps2scan|ps2_byte_r[1] is being clocked by ps2scan:ps2scan|num[0]
+Warning (332060): Node: ps2k_clk was determined to be a clock but was found without an associated clock assignment.
+    Info (13166): Register ps2scan:ps2scan|temp_data[0] is being clocked by ps2k_clk
+Warning (332060): Node: vga:i_vga|hsync was determined to be a clock but was found without an associated clock assignment.
+    Info (13166): Register row_pos[2] is being clocked by vga:i_vga|hsync
+Info (332123): Deriving Clock Uncertainty. Please refer to report_sdc in the Timing Analyzer to see clock uncertainties.
+Info (332146): Worst-case setup slack is 8.212
+    Info (332119):     Slack       End Point TNS Clock 
+    Info (332119): ========= =================== =====================
+    Info (332119):     8.212               0.000 clk 
+Info (332146): Worst-case hold slack is 0.185
+    Info (332119):     Slack       End Point TNS Clock 
+    Info (332119): ========= =================== =====================
+    Info (332119):     0.185               0.000 clk 
+Info (332140): No Recovery paths to report
+Info (332140): No Removal paths to report
+Info (332146): Worst-case minimum pulse width slack is 9.223
+    Info (332119):     Slack       End Point TNS Clock 
+    Info (332119): ========= =================== =====================
+    Info (332119):     9.223               0.000 clk 
+Info (332102): Design is not fully constrained for setup requirements
+Info (332102): Design is not fully constrained for hold requirements
+Info: Quartus Prime Timing Analyzer was successful. 0 errors, 23 warnings
+    Info: Peak virtual memory: 521 megabytes
+    Info: Processing ended: Sun Mar 19 13:08:24 2023
+    Info: Elapsed time: 00:00:04
+    Info: Total CPU time (on all processors): 00:00:06
+Info (293000): Quartus Prime Full Compilation was successful. 0 errors, 160 warnings
+Info (23030): Evaluation of Tcl script /home/zlobec/intelFPGA_lite/22.1std/quartus/common/tcl/internal/qsh_flow.tcl was successful
+Info: Quartus Prime Shell was successful. 0 errors, 161 warnings
+    Info: Peak virtual memory: 485 megabytes
+    Info: Processing ended: Sun Mar 19 13:08:25 2023
+    Info: Elapsed time: 00:03:19
+    Info: Total CPU time (on all processors): 00:03:42
