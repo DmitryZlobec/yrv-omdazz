@@ -26,7 +26,7 @@ You can run ./07_upload_soft_to_fpga.bash directly form source folder
 
 Toolchain shoul be installed in:  _/opt/riscv_native</_
 
-Minimal version of gcc should be 12.1.0
+Minimal version of GCC should be 12.1.0
 
 ## Tetris game 
 
