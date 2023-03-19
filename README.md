@@ -1,6 +1,17 @@
 # YRV RISC-V CPU for OMDAZZ board with VGA and PS/2 keyboard
 
-## Program Description
+## Scripts description
+In  Plus/boards/omdazz/ run
+```
+  01_clean.bash                   Clean project
+  05_synthesize_for_fpga.bash     Synthesize project and load ro FPGA
+  06_configure_fpga.bash          Load project to FPGA
+  07_upload_soft_to_fpga.bash     Upload binary via URAT
+  
+```
+
+
+## Programs Description
 ```
   01_hello_text        Simple hello world 
   01_tetris            ASCII based tetris game
