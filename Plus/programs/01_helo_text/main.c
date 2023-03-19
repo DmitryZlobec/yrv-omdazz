@@ -76,7 +76,7 @@ void main() {
     ee_printf("\n\n\n\n\n\n\n\n\n\n\n\n                              Hello world!!!\n");
     ee_printf("\n\n\n                                  RISC-V\n");
     ee_printf("\n\n\n                        Last pressed keys is:\n");
-    ee_printf("\n\n\n\n\n\n\n\n\n \n\n\n\n\n\n\n\n\n\n \n\n\n\n\n\n\n\n\n\n \n\n\n\n\n\n\n\n\n (c) 2023 Petrenko Dmitry");
+    ee_printf("\n\n\n\n\n\n\n\n\n \n\n\n\n\n\n\n\n\n\n \n\n\n\n\n\n\n\n\n\n \n\n\n\n\n\n\n\n\n 2023");
 
 
 
