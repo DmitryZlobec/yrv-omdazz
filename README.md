@@ -1,4 +1,4 @@
-# YRV RISC-V CPU for OMDAZZ board
+# YRV RISC-V CPU for OMDAZZ board with VGA and PS/2 keyboard
 
 ## Program Description
 ```
