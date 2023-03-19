@@ -1,0 +1,1 @@
+li t1, 0xffff0

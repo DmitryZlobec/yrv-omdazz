@@ -1,0 +1,185 @@
+------------------------------------------------------------
+Timing Analyzer Summary
+------------------------------------------------------------
+
+Type  : Slow 1200mV 85C Model Setup 'clk'
+Slack : -5.484
+TNS   : -96.963
+
+Type  : Slow 1200mV 85C Model Setup 'ps2scan:ps2scan|newkey'
+Slack : -4.337
+TNS   : -50.461
+
+Type  : Slow 1200mV 85C Model Setup 'ps2k_clk'
+Slack : -3.826
+TNS   : -47.761
+
+Type  : Slow 1200mV 85C Model Setup 'ps2scan:ps2scan|num[0]'
+Slack : -2.086
+TNS   : -19.621
+
+Type  : Slow 1200mV 85C Model Setup 'digits:digits|dig_counter[15]'
+Slack : -0.003
+TNS   : -0.003
+
+Type  : Slow 1200mV 85C Model Hold 'ps2scan:ps2scan|num[0]'
+Slack : -0.496
+TNS   : -2.056
+
+Type  : Slow 1200mV 85C Model Hold 'clk'
+Slack : 0.453
+TNS   : 0.000
+
+Type  : Slow 1200mV 85C Model Hold 'digits:digits|dig_counter[15]'
+Slack : 0.453
+TNS   : 0.000
+
+Type  : Slow 1200mV 85C Model Hold 'ps2k_clk'
+Slack : 0.485
+TNS   : 0.000
+
+Type  : Slow 1200mV 85C Model Hold 'ps2scan:ps2scan|newkey'
+Slack : 0.507
+TNS   : 0.000
+
+Type  : Slow 1200mV 85C Model Minimum Pulse Width 'clk'
+Slack : -3.000
+TNS   : -77.350
+
+Type  : Slow 1200mV 85C Model Minimum Pulse Width 'ps2k_clk'
+Slack : -3.000
+TNS   : -25.305
+
+Type  : Slow 1200mV 85C Model Minimum Pulse Width 'ps2scan:ps2scan|newkey'
+Slack : -1.487
+TNS   : -57.993
+
+Type  : Slow 1200mV 85C Model Minimum Pulse Width 'ps2scan:ps2scan|num[0]'
+Slack : -1.487
+TNS   : -16.357
+
+Type  : Slow 1200mV 85C Model Minimum Pulse Width 'digits:digits|dig_counter[15]'
+Slack : -1.487
+TNS   : -2.974
+
+Type  : Slow 1200mV 0C Model Setup 'clk'
+Slack : -5.115
+TNS   : -86.665
+
+Type  : Slow 1200mV 0C Model Setup 'ps2scan:ps2scan|newkey'
+Slack : -4.006
+TNS   : -46.035
+
+Type  : Slow 1200mV 0C Model Setup 'ps2k_clk'
+Slack : -3.661
+TNS   : -44.750
+
+Type  : Slow 1200mV 0C Model Setup 'ps2scan:ps2scan|num[0]'
+Slack : -1.836
+TNS   : -17.223
+
+Type  : Slow 1200mV 0C Model Setup 'digits:digits|dig_counter[15]'
+Slack : 0.092
+TNS   : 0.000
+
+Type  : Slow 1200mV 0C Model Hold 'ps2scan:ps2scan|num[0]'
+Slack : -0.510
+TNS   : -2.582
+
+Type  : Slow 1200mV 0C Model Hold 'clk'
+Slack : 0.401
+TNS   : 0.000
+
+Type  : Slow 1200mV 0C Model Hold 'digits:digits|dig_counter[15]'
+Slack : 0.403
+TNS   : 0.000
+
+Type  : Slow 1200mV 0C Model Hold 'ps2k_clk'
+Slack : 0.432
+TNS   : 0.000
+
+Type  : Slow 1200mV 0C Model Hold 'ps2scan:ps2scan|newkey'
+Slack : 0.476
+TNS   : 0.000
+
+Type  : Slow 1200mV 0C Model Minimum Pulse Width 'clk'
+Slack : -3.000
+TNS   : -77.350
+
+Type  : Slow 1200mV 0C Model Minimum Pulse Width 'ps2k_clk'
+Slack : -3.000
+TNS   : -25.305
+
+Type  : Slow 1200mV 0C Model Minimum Pulse Width 'ps2scan:ps2scan|newkey'
+Slack : -1.487
+TNS   : -57.993
+
+Type  : Slow 1200mV 0C Model Minimum Pulse Width 'ps2scan:ps2scan|num[0]'
+Slack : -1.487
+TNS   : -17.023
+
+Type  : Slow 1200mV 0C Model Minimum Pulse Width 'digits:digits|dig_counter[15]'
+Slack : -1.487
+TNS   : -2.974
+
+Type  : Fast 1200mV 0C Model Setup 'clk'
+Slack : -1.913
+TNS   : -17.167
+
+Type  : Fast 1200mV 0C Model Setup 'ps2scan:ps2scan|newkey'
+Slack : -1.533
+TNS   : -16.633
+
+Type  : Fast 1200mV 0C Model Setup 'ps2k_clk'
+Slack : -1.094
+TNS   : -11.629
+
+Type  : Fast 1200mV 0C Model Setup 'ps2scan:ps2scan|num[0]'
+Slack : -0.603
+TNS   : -6.010
+
+Type  : Fast 1200mV 0C Model Setup 'digits:digits|dig_counter[15]'
+Slack : 0.564
+TNS   : 0.000
+
+Type  : Fast 1200mV 0C Model Hold 'clk'
+Slack : 0.186
+TNS   : 0.000
+
+Type  : Fast 1200mV 0C Model Hold 'digits:digits|dig_counter[15]'
+Slack : 0.187
+TNS   : 0.000
+
+Type  : Fast 1200mV 0C Model Hold 'ps2scan:ps2scan|num[0]'
+Slack : 0.187
+TNS   : 0.000
+
+Type  : Fast 1200mV 0C Model Hold 'ps2scan:ps2scan|newkey'
+Slack : 0.197
+TNS   : 0.000
+
+Type  : Fast 1200mV 0C Model Hold 'ps2k_clk'
+Slack : 0.199
+TNS   : 0.000
+
+Type  : Fast 1200mV 0C Model Minimum Pulse Width 'clk'
+Slack : -3.000
+TNS   : -67.820
+
+Type  : Fast 1200mV 0C Model Minimum Pulse Width 'ps2k_clk'
+Slack : -3.000
+TNS   : -24.846
+
+Type  : Fast 1200mV 0C Model Minimum Pulse Width 'ps2scan:ps2scan|newkey'
+Slack : -1.000
+TNS   : -39.000
+
+Type  : Fast 1200mV 0C Model Minimum Pulse Width 'ps2scan:ps2scan|num[0]'
+Slack : -1.000
+TNS   : -11.000
+
+Type  : Fast 1200mV 0C Model Minimum Pulse Width 'digits:digits|dig_counter[15]'
+Slack : -1.000
+TNS   : -2.000
+
+------------------------------------------------------------
