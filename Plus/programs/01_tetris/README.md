@@ -22,7 +22,7 @@ Controls:
 What it looks like:
 
     [LEVEL: 1 | SCORE: 0]
-    ~~~~~~~~~~~~~~~~~~~~~~~~~
+    
     !                        !
     !                        !
     !                        !
