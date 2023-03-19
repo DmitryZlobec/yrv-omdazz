@@ -24,7 +24,7 @@ You can run ./07_upload_soft_to_fpga.bash directly form source folder
 
 ## Toolchain 
 
-Toolchain shoul be installed in:  _/opt/riscv_native</_
+Toolchain shoul be installed in:  _/opt/riscv_native</
 
 Minimal version of GCC should be 12.1.0
 
