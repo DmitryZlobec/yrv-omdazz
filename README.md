@@ -29,6 +29,7 @@ Toolchain shoul be installed in:  _/opt/riscv_native
 Minimal version of GCC should be 12.1.0
 
 ## Tetris game 
+![ASCII Tetris game](/tetris.jpg "Tetris")
 
 ## Related books:
 "Inside An Open-Source Processor" ISBN 978-3-89576-443-1
