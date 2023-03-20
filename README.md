@@ -28,7 +28,7 @@ Prebuild toolchain avialable here: https://github.com/stnolting/riscv-gcc-prebui
 
 Your should use tag rv32i-4.0.0 
 
-Toolchain should be installed in:  _/opt/riscv
+Toolchain should be installed in:  _/opt/riscv_
 
 Minimal version of GCC should be 12.1.0
 
