@@ -24,7 +24,11 @@ You can run ./07_upload_soft_to_fpga.bash directly form source folder
 
 ## Toolchain 
 
-Toolchain shoul be installed in:  _/opt/riscv_native
+Prebuild toolchain avialable here: https://github.com/stnolting/riscv-gcc-prebuilt
+
+Your should use tag rv32i-4.0.0 
+
+Toolchain should be installed in:  _/opt/riscv
 
 Minimal version of GCC should be 12.1.0
 
