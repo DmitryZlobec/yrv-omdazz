@@ -1,6 +1,6 @@
-LD=/opt/riscv_native/bin/riscv32-unknown-elf-gcc 
-GCC=/opt/riscv_native/bin/riscv32-unknown-elf-gcc
-OBJ = /opt/riscv_native/bin/riscv32-unknown-elf-objcopy
+LD=/opt/riscv/bin/riscv32-unknown-elf-gcc 
+GCC=/opt/riscv/bin/riscv32-unknown-elf-gcc
+OBJ = /opt/riscv/bin/riscv32-unknown-elf-objcopy
 B2H = ../common/bin2hex
 export objcopy := $(OBJ)
 export bin2hex := $(B2H)
