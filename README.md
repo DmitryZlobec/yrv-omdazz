@@ -41,3 +41,7 @@ Minimal version of GCC should be 12.1.0
 "Modern C." Manning, 2019, 9781617295812. ffhal-02383654 Jens Gustedt. 
 
 
+## Videos
+Tetris game: https://youtube.com/shorts/ni1T5zjhiEM
+Tetris game: https://youtu.be/BfXtpLc7dgg
+Keyboard: https://youtube.com/shorts/ZKTfLrlLjTY
