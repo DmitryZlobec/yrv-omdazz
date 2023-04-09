@@ -24,9 +24,18 @@ dev=/dev/ttyUSB0
    stty -F $dev raw speed 57600 -crtscts cs8 -parenb -cstopb  \
 || error "USB-to-UART is not connected or is not working"
 
-if [ -f $program_mem32 ]; then
-    cat $program_mem32 > $dev
+
+
+#if [ -f $program_mem32 ]; then
+#    cat $program_mem32 > $dev
+#else
+#    warning "Cannot find \"$program_mem32\", use \"$demo_program_mem32\" instead."
+#    cat $demo_program_mem32 > $dev
+#fi
+
+if [ -f $program_mem16 ]; then
+    cat $program_mem16 > $dev
 else
-    warning "Cannot find \"$program_mem32\", use \"$demo_program_mem32\" instead."
-    cat $demo_program_mem32 > $dev
+    warning "Cannot find \"$program_mem16\", use \"$demo_program_mem16\" instead."
+    cat $demo_program_mem16 > $dev
 fi

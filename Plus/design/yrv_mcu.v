@@ -23,9 +23,22 @@
 `define IO_PORT32 14'h0001                                 /* lsword of port 3/2 address   */
 `define IO_PORT54 14'h0002                                 /* lsword of port 5/4 address   */
 `define IO_PORT76 14'h0003                                 /* lsword of port 7/6 address   */
+
 `define MEM_BASE  16'h0000                                 /* msword of mem address        */
 `define VGA_BASE_0  16'hA000                                 /* msword of mem address        */
 `define VGA_BASE_1  16'hA001                                 /* msword of mem address        */
+
+
+`define IO_PORT0 15'h0000                                 /* lsword of port 0 address   */
+`define IO_PORT1 15'h0001                                 /* lsword of port 1 address   */
+`define IO_PORT2 15'h0002                                 /* lsword of port 2 address   */
+`define IO_PORT3 15'h0003                                 /* lsword of port 3 address   */
+`define IO_PORT4 15'h0004                                 /* lsword of port 4 address   */
+`define IO_PORT5 15'h0005                                 /* lsword of port 5 address   */
+`define IO_PORT6 15'h0006                                 /* lsword of port 6 address   */
+`define IO_PORT7 15'h0007                                 /* lsword of port 7 address   */
+
+
 
 
 /* processor                                                                               */
@@ -49,8 +62,7 @@
 
 module yrv_mcu  (debug_mode, port0_reg, port1_reg, port2_reg, port3_reg, ser_clk, ser_txd,
                  wfi_state, clk, ei_req, nmi_req, port4_in, port5_in, resetb, ser_rxd
-
-                 `ifdef BOOT_FROM_AUX_UART
+                `ifdef BOOT_FROM_AUX_UART
                  , aux_uart_rx
                  `endif
                  `ifdef EXPOSE_MEM_BUS
@@ -82,7 +94,7 @@ module yrv_mcu  (debug_mode, port0_reg, port1_reg, port2_reg, port3_reg, ser_clk
 
 `ifdef EXPOSE_MEM_BUS
   output        mem_ready;                                 /* memory ready                 */
-  output [31:0] mem_rdata;                                 /* memory read data             */
+  output  [31:0] mem_rdata;                                 /* memory read data             */
   output        mem_lock;                                  /* memory lock (rmw)            */
   output        mem_write;                                 /* memory write enable          */
   output  [1:0] mem_trans;                                 /* memory transfer type         */
@@ -107,6 +119,12 @@ module yrv_mcu  (debug_mode, port0_reg, port1_reg, port2_reg, port3_reg, ser_clk
   wire          mem_write;                                 /* memory write enable          */
   wire          port10_dec, port32_dec;                    /* i/o port decodes             */
   wire          port54_dec, port76_dec;
+  
+  wire          port0_dec, port1_dec;                    /* i/o port decodes             */
+  wire          port2_dec, port3_dec;
+  wire          port4_dec, port5_dec;                    /* i/o port decodes             */
+  wire          port6_dec, port7_dec;
+  
   wire          rd_rdata;                                  /* serial port read             */
   wire          ser_clk;                                   /* serial clk output (cks mode) */
   wire          ser_txd;                                   /* transmit data output         */
@@ -131,21 +149,22 @@ module yrv_mcu  (debug_mode, port0_reg, port1_reg, port2_reg, port3_reg, ser_clk
   reg    [15:0] port6_reg,  port7_reg;
   reg    [15:0] mem_addr_reg;                              /* reg'd memory address         */
 
-`ifdef INSTANCE_MEM
-  wire   [31:0] mem_rdata;                                 /* raw read data                */
-`else
+// `ifdef INSTANCE_MEM
+//   wire   [31:0] mem_rdata;                                 /* raw read data                */
+// `else
   wire    [3:0] mem_wr_byte;                               /* system ram byte enables      */
 	reg     [7:0] mcu_mem [0:1024*16];                          /* system ram                   */
   reg    [31:0] mem_rdata;                                 /* raw read data                */
-`endif
+// `endif
 
+  // wire   [31:0] mem_rdata;                                 /* raw read data                */
 
   
 
   /*****************************************************************************************/
   /* 32-bit bus, no wait states, internal local interrupts                                 */
   /*****************************************************************************************/
-  assign bus_32    = 1'b1;
+  assign bus_32    = 1'b0;
   assign mem_ready = 1'b1;
   assign li_req    = {12'h0, bufr_empty, bufr_done, bufr_full, bufr_ovr};
 
@@ -207,7 +226,7 @@ module yrv_mcu  (debug_mode, port0_reg, port1_reg, port2_reg, port3_reg, ser_clk
   boot_hex_parser
   # (
     .address_width      ( boot_address_width ),
-    .data_width         ( 32                 ),
+    .data_width         ( 16                 ),
     .clk_frequency      ( `CLK_FREQUENCY     ),
     .timeout_in_seconds ( 2                  )
   )
@@ -241,7 +260,7 @@ module yrv_mcu  (debug_mode, port0_reg, port1_reg, port2_reg, port3_reg, ser_clk
     boot_data_reg <= boot_data;
 
   assign mem_addr   = boot_busy ?       boot_address      : top_mem_addr;
-  assign mem_ble    = boot_busy ? { 4 { boot_valid    } } : top_mem_ble;
+  assign mem_ble    = boot_busy ? { 1'b0, 1'b0, boot_valid, boot_valid } : top_mem_ble;
   assign mem_trans  = boot_busy ? { 2 { boot_valid    } } : top_mem_trans;
   assign mem_wdata  = boot_busy ?       boot_data_reg     : top_mem_wdata;
   assign mem_write  = boot_busy ?       boot_valid        : top_mem_write;
@@ -259,54 +278,49 @@ module yrv_mcu  (debug_mode, port0_reg, port1_reg, port2_reg, port3_reg, ser_clk
 
 `endif
 
-  /*****************************************************************************************/
-  /* 32-bit memory (currently 1k x 32)                                                     */
-  /*****************************************************************************************/
-`ifdef INSTANCE_MEM
-  inst_mem MEM    ( .mem_rdata(mem_rdata), .clk(clk), .mem_addr(mem_addr[15:0]),
-                    .mem_addr_reg(mem_addr_reg),.mem_ble_reg(mem_ble_reg),
-                    .mem_ready(mem_ready), .mem_trans(mem_trans), .mem_wdata(mem_wdata),
-                    .mem_wr_reg(mem_wr_reg) );
-`else
+//   /*****************************************************************************************/
+//   /* 32-bit memory (currently 1k x 32)                                                     */
+//   /*****************************************************************************************/
+// `ifdef INSTANCE_MEM
+//   inst_mem MEM    ( .mem_rdata(mem_rdata), .clk(clk), .mem_addr(mem_addr[15:0]),
+//                     .mem_addr_reg(mem_addr_reg),.mem_ble_reg(mem_ble_reg),
+//                     .mem_ready(mem_ready), .mem_trans(mem_trans), .mem_wdata(mem_wdata),
+//                     .mem_wr_reg(mem_wr_reg) );
+// `else
   assign mem_wr_byte = {4{mem_wr_reg}} & mem_ble_reg & {4{mem_ready}};
 
 
   always @ (posedge clk) begin
     if (mem_trans[0]) begin
-      mem_rdata[31:24] <= mcu_mem[{mem_addr[13:2], 2'b11}];
-      mem_rdata[23:16] <= mcu_mem[{mem_addr[13:2], 2'b10}];
-      mem_rdata[15:8]  <= mcu_mem[{mem_addr[13:2], 2'b01}];
-      mem_rdata[7:0]   <= mcu_mem[{mem_addr[13:2], 2'b00}];
+      mem_rdata[15:8]  <= mcu_mem[{mem_addr[13:1], 1'b1}];
+      mem_rdata[7:0]   <= mcu_mem[{mem_addr[13:1], 1'b0}];
       end
-    if (mem_wr_byte[3]) mcu_mem[{mem_addr_reg[13:2], 2'b11}] <= mem_wdata[31:24];
-    if (mem_wr_byte[2]) mcu_mem[{mem_addr_reg[13:2], 2'b10}] <= mem_wdata[23:16];
-    if (mem_wr_byte[1]) mcu_mem[{mem_addr_reg[13:2], 2'b01}] <= mem_wdata[15:8];
-    if (mem_wr_byte[0]) mcu_mem[{mem_addr_reg[13:2], 2'b00}] <= mem_wdata[7:0];
+    if (mem_wr_byte[1]) mcu_mem[{mem_addr_reg[13:1], 1'b1}] <= mem_wdata[15:8];
+    if (mem_wr_byte[0]) mcu_mem[{mem_addr_reg[13:1], 1'b0}] <= mem_wdata[7:0];
     end
 
 
 
 
-  /*****************************************************************************************/
-  /* This option allows to create examples with read-only memory                           */
-  /* when booting from UART is not available.                                              */
-  /*                                                                                       */
-  /* Note that Intel FPGA Quartus Prime does not support 8-bit readmemh for synthesis.     */
-  /* It means that the user has to either use booting from UART                            */
-  /* or rely on read-only 32-bit wide memory inside inst_mem.v undef ifdef INSTANCE_MEM.   */
-  /*****************************************************************************************/
+//   /*****************************************************************************************/
+//   /* This option allows to create examples with read-only memory                           */
+//   /* when booting from UART is not available.                                              */
+//   /*                                                                                       */
+//   /* Note that Intel FPGA Quartus Prime does not support 8-bit readmemh for synthesis.     */
+//   /* It means that the user has to either use booting from UART                            */
+//   /* or rely on read-only 32-bit wide memory inside inst_mem.v undef ifdef INSTANCE_MEM.   */
+//   /*****************************************************************************************/
 
-`ifdef INTEL_VERSION
-  `ifndef SIMULATION
-    `define NO_READMEMH_FOR_8_BIT_WIDE_MEM
-  `endif
-`endif
+// `ifdef INTEL_VERSION
+//   `ifndef SIMULATION
+//     `define NO_READMEMH_FOR_8_BIT_WIDE_MEM
+//   `endif
+// `endif
 
-`ifndef NO_READMEMH_FOR_8_BIT_WIDE_MEM
-initial $readmemh("code_demo.mem8", mcu_mem);
-`endif
+// `ifndef NO_READMEMH_FOR_8_BIT_WIDE_MEM
+// `endif
 
-`endif
+// `endif
 
   /*****************************************************************************************/
   /* bus interface                                                                         */
@@ -330,16 +344,38 @@ initial $readmemh("code_demo.mem8", mcu_mem);
       end
     end
 
-  assign port10_dec = (mem_addr_reg[15:2] == `IO_PORT10);
-  assign port32_dec = (mem_addr_reg[15:2] == `IO_PORT32);
-  assign port54_dec = (mem_addr_reg[15:2] == `IO_PORT54);
-  assign port76_dec = (mem_addr_reg[15:2] == `IO_PORT76);
+  // assign port10_dec = (mem_addr_reg[15:2] == `IO_PORT10);
+  // assign port32_dec = (mem_addr_reg[15:2] == `IO_PORT32);
+  // assign port54_dec = (mem_addr_reg[15:2] == `IO_PORT54);
+  // assign port76_dec = (mem_addr_reg[15:2] == `IO_PORT76);
+
+
+  assign port0_dec = (mem_addr_reg[15:1] == `IO_PORT0);
+  assign port1_dec = (mem_addr_reg[15:1] == `IO_PORT1);
+  assign port2_dec = (mem_addr_reg[15:1] == `IO_PORT2);
+  assign port3_dec = (mem_addr_reg[15:1] == `IO_PORT3);
+  assign port4_dec = (mem_addr_reg[15:1] == `IO_PORT4);
+  assign port5_dec = (mem_addr_reg[15:1] == `IO_PORT5);
+  assign port6_dec = (mem_addr_reg[15:1] == `IO_PORT6);
+  assign port7_dec = (mem_addr_reg[15:1] == `IO_PORT7);
+
+
+  // assign mcu_rdata  = (mem_rd_reg) ? mem_rdata              :
+  //                     (port10_dec) ? {port1_reg, port0_reg} :
+  //                     (port32_dec) ? {port3_reg, port2_reg} :
+  //                     (port54_dec) ? {port5_reg, port4_reg} :
+  //                     (port76_dec) ? {port7_dat, port6_reg} : 32'h0;
 
   assign mcu_rdata  = (mem_rd_reg) ? mem_rdata              :
-                      (port10_dec) ? {port1_reg, port0_reg} :
-                      (port32_dec) ? {port3_reg, port2_reg} :
-                      (port54_dec) ? {port5_reg, port4_reg} :
-                      (port76_dec) ? {port7_dat, port6_reg} : 32'h0;
+                      (port0_dec) ? port0_reg :
+                      (port1_dec) ? port1_reg :
+                      (port2_dec) ? port2_reg :
+                      (port3_dec) ? port3_reg :
+                      (port4_dec) ? port4_reg :
+                      (port5_dec) ? port5_reg :
+                      (port6_dec) ? port6_reg :
+                      (port7_dec) ? port7_reg :32'h0;
+
 
   /*****************************************************************************************/
   /* parallel ports                                                                        */
@@ -355,31 +391,72 @@ initial $readmemh("code_demo.mem8", mcu_mem);
       port6_reg <= 16'h0;
       end
     else begin
-      if (io_wr_reg && port10_dec && mem_ready) begin
-        if (mem_ble_reg[3]) port1_reg[15:8] <= mem_wdata[31:24];
-        if (mem_ble_reg[2]) port1_reg[7:0]  <= mem_wdata[23:16];
+      if (io_wr_reg && port0_dec && mem_ready) begin
         if (mem_ble_reg[1]) port0_reg[15:8] <= mem_wdata[15:8];
         if (mem_ble_reg[0]) port0_reg[7:0]  <= mem_wdata[7:0];
         end
-      if (io_wr_reg && port32_dec && mem_ready) begin
-        if (mem_ble_reg[3]) port3_reg[15:8] <= mem_wdata[31:24];
-        if (mem_ble_reg[2]) port3_reg[7:0]  <= mem_wdata[23:16];
+      if (io_wr_reg && port1_dec && mem_ready) begin
+        if (mem_ble_reg[1]) port1_reg[15:8] <= mem_wdata[15:8];
+        if (mem_ble_reg[0]) port1_reg[7:0]  <= mem_wdata[7:0];
+        end
+      if (io_wr_reg && port2_dec && mem_ready) begin
         if (mem_ble_reg[1]) port2_reg[15:8] <= mem_wdata[15:8];
         if (mem_ble_reg[0]) port2_reg[7:0]  <= mem_wdata[7:0];
         end
+      if (io_wr_reg && port3_dec && mem_ready) begin
+        if (mem_ble_reg[1]) port3_reg[15:8] <= mem_wdata[15:8];
+        if (mem_ble_reg[0]) port3_reg[7:0]  <= mem_wdata[7:0];
+        end  
       port4_reg <= port4_in;
       port5_reg <= port5_in;
-      if (io_wr_reg && port76_dec && mem_ready) begin
-        if (mem_ble_reg[2]) port7_reg[7:0] <= mem_wdata[23:16];
+      
+      if (io_wr_reg && port6_dec && mem_ready) begin
         if (mem_ble_reg[1]) port6_reg[15:8] <= mem_wdata[15:8];
         if (mem_ble_reg[0]) port6_reg[7:0]  <= mem_wdata[7:0];
+        end
+      if (io_wr_reg && port7_dec && mem_ready) begin
+        if (mem_ble_reg[0]) port7_reg[7:0] <= mem_wdata[7:0];
         end
       end
     end
 
-  /*****************************************************************************************/
-  /* serial port                                                                           */
-  /*****************************************************************************************/
+
+  // always @ (posedge clk or negedge resetb) begin
+  //   if (!resetb) begin
+  //     port0_reg <= 16'h0;
+  //     port1_reg <= 16'h0;
+  //     port2_reg <= 16'h0;
+  //     port3_reg <= 16'h0;
+  //     port4_reg <= 16'h0;
+  //     port5_reg <= 16'h0;
+  //     port6_reg <= 16'h0;
+  //     end
+  //   else begin
+  //     if (io_wr_reg && port10_dec && mem_ready) begin
+  //       if (mem_ble_reg[3]) port1_reg[15:8] <= mem_wdata[31:24];
+  //       if (mem_ble_reg[2]) port1_reg[7:0]  <= mem_wdata[23:16];
+  //       if (mem_ble_reg[1]) port0_reg[15:8] <= mem_wdata[15:8];
+  //       if (mem_ble_reg[0]) port0_reg[7:0]  <= mem_wdata[7:0];
+  //       end
+  //     if (io_wr_reg && port32_dec && mem_ready) begin
+  //       if (mem_ble_reg[3]) port3_reg[15:8] <= mem_wdata[31:24];
+  //       if (mem_ble_reg[2]) port3_reg[7:0]  <= mem_wdata[23:16];
+  //       if (mem_ble_reg[1]) port2_reg[15:8] <= mem_wdata[15:8];
+  //       if (mem_ble_reg[0]) port2_reg[7:0]  <= mem_wdata[7:0];
+  //       end
+  //     port4_reg <= port4_in;
+  //     port5_reg <= port5_in;
+  //     if (io_wr_reg && port76_dec && mem_ready) begin
+  //       if (mem_ble_reg[2]) port7_reg[7:0] <= mem_wdata[23:16];
+  //       if (mem_ble_reg[1]) port6_reg[15:8] <= mem_wdata[15:8];
+  //       if (mem_ble_reg[0]) port6_reg[7:0]  <= mem_wdata[7:0];
+  //       end
+  //     end
+  //   end
+
+  // /*****************************************************************************************/
+  // /* serial port                                                                           */
+  // /*****************************************************************************************/
   serial_top SERIAL ( .bufr_done(bufr_done), .bufr_empty(bufr_empty), .bufr_full(bufr_full),
                       .bufr_ovr(bufr_ovr), .rx_rdata(rx_rdata), .ser_clk(ser_clk),
                       .ser_txd(ser_txd), .cks_mode(port6_reg[0]), .clkp(clk),

@@ -94,7 +94,7 @@ module yrv_top  (csr_achk, csr_addr, csr_read, csr_wdata, csr_write, debug_mode,
   output [11:0] csr_addr;                                  /* csr address                  */
   output [31:0] csr_wdata;                                 /* csr write data               */
   output [31:0] mem_addr;                                  /* memory address               */
-  output [31:0] mem_wdata;                                 /* memory write data            */
+  output [15:0] mem_wdata;                                 /* memory write data            */
 
   /*****************************************************************************************/
   /* signal declarations                                                                   */

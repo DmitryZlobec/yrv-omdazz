@@ -1,7 +1,7 @@
 module boot_hex_parser
 # (
     parameter address_width       = 32,
-              data_width          = 32,
+              data_width          = 16,
               char_width          = 8,
               clk_frequency       = 12.5 * 1000 * 1000,
               timeout_in_seconds  = 2

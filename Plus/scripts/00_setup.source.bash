@@ -236,4 +236,8 @@ rars_path="$external_dir/$rars"
 program_mem32=program.mem32
 demo_program_mem32=code_demo.mem32
 
+program_mem16=program.mem16
+demo_program_mem16=code_demo.mem16
+
+
 cp "$design_dir"/code_demo.mem* .
